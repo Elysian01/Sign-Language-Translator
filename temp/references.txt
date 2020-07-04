@@ -1,0 +1,9 @@
+# How to build a Teachable Machine with TensorFlow.js
+https://observablehq.com/@nsthorat/how-to-build-a-teachable-machine-with-tensorflow-js
+
+# Youtube : ml5.js: KNN Classification Part 1
+https://www.youtube.com/watch?v=KTNqXwkLuM4
+
+# Github :
+https://github.com/SufiyaanNadeem/Sign-Language-Translator
+https://github.com/shekit/alexa-sign-language-translator
