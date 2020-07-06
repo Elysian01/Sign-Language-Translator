@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "live-server public",
+    "serve": "live-server public/",
     "build": "webpack --watch",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
@@ -13,10 +13,13 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset": "^1.1.6",
     "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.5.0",
     "live-server": "^1.2.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
   },
