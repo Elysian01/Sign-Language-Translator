@@ -7,13 +7,33 @@
   <script src="ml5.min.js"></script>
   <script src="p5.js"></script>
   <script src="p5.sound.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style2.css">
   <meta charset="utf-8">
   <title>KNN Classifier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+ <header>
+  <h1 class="myheading" style="text-align: center;font-family: 'Pacifico', cursive;word-spacing: 10px;
+  ">SIGN  LANGUAGE  TRANSLATOR</h1>
+  
+<ul class="topnav">
+  <li><a class="active" href="#" >Training</a></li>
+  <li><a href="#" >Model & Voice</a></li>
+  <li><a href="#" >Video Call</a></li>
+  <li ><a href="#" >About</a></li>
+</ul>
+</header>
+<br><br><br><br><br>
+<main>
+
+
   <div id="container">
+ 
+    <!-- <h1 class="subheading">Training ! </h1> -->
+  
     <div id="input" class="tile"></div>
     <div id="training" class="tile">
       <div id="inputClass">
@@ -21,7 +41,7 @@
           <input id="inputClassName" type="text" placeholder="Class name here">
           <input type="color" id="colorClass">
         </div>
-        <button type="button" onclick="onAddClass()">Add➕</button>
+        <button type="button" onclick="onAddClass()">Add New Class</button>
       </div>
       <div id="class-cont">
         <!-- <div class="class">
@@ -35,7 +55,7 @@
     </div>
 
   </div>
-
+</main>
   <script src="sketch.js"></script>
 
 </body>

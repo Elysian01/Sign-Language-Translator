@@ -1,3 +1,4 @@
+
 html, body {
   margin: 0;
   padding: 0;
@@ -6,20 +7,25 @@ html, body {
   overflow-y: hidden;
 }
 
-body * {
+/* body * {
   font-family: "Righteous", sans-serif;
-}
+} */
 
 canvas {
   display: block;
   max-width: 100%;
   position: relative;
-  transform: scaleX(-1) translateY(-60%);
-  border-radius: 20px;
-  box-shadow: 5px 10px #ddd;
-  top: 50%;
+  border-color: black;
+  border-style:solid;
+  transform: scaleX(-1.2) translateY(-60%);
+  border-radius: 10px;
+  margin-left:-30%;
+  /* box-shadow: 5px 10px #ddd; */
+  top: 40%;
 }
-
+.myheading{
+  text-align: center;
+}
 #container {
   display: flex;
   max-height: 95%;
@@ -49,6 +55,20 @@ canvas {
   border-radius: 20px;
   box-shadow: 0 8px #ccc;
 }
+/* #result{
+  position: absolute;
+  bottom: 0; 
+  right: 0;
+  left: 0;
+  width:40%;
+  height:20px;
+  text-align:center;
+padding-top:20px;
+padding-bottom:20px;
+  background-color:goldenrod;
+  color:black;
+  margin: 0;
+} */
 
 #training {
   flex: 2;
@@ -71,9 +91,10 @@ canvas {
   margin: auto;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 5px #aaa;
+  /* box-shadow: 0 5px red; */
   outline: none;
-  font-family: "Righteous", sans-serif;
+  /* background-color: aquamarine; */
+  /* font-family: "Righteous", sans-serif; */
 }
 
 .trainButton:active {
@@ -93,6 +114,7 @@ canvas {
 
 .class {
   background-color: rgba(255, 255, 255, 0.2);
+
   margin: 15px auto;
   flex: 1;
   max-width: 70%;
@@ -155,7 +177,7 @@ canvas {
   flex-direction: column;
   text-align: center;
   margin: 20px auto;
-  color: #aaa;
+  color: red;
 }
 
 #userInputClass {
@@ -165,27 +187,30 @@ canvas {
 #inputClassName {
   padding: 5px 10px;
   border-radius: 10px;
-  background-color: #fafafa;
-  border: 0;
+  background-color: white;
+  border-style: solid;
+  border-color:black;
   margin: 0 10px;
-  font-size: 20px;
-  box-shadow: 0 8px #ccc;
+  font-size: 30px;
+text-align: center;
   outline: none;
 }
-
+/* 
 #inputClassName:focus {
   box-shadow: 0 3px #ccc;
   transform: translateY(5px);
-}
+} */
 
 #colorClass {
   width: 35px;
   height: 30px;
   transform: translateY(8px);
-  background-color: #fafafa;
-  border: 0;
-  padding: 5px;
-  box-shadow: 0 5px #ccc;
+  /* background-color: red; */
+  border-style:solid;
+  border-color: black;
+  padding: 0px;
+  margin: 0px;
+  /* box-shadow: 0 5px #ccc; */
   cursor: pointer;
 }
 
@@ -197,16 +222,17 @@ canvas {
 #inputClass button {
   flex: 1;
   border-radius: 10px;
-  background-color: #555;
-  color: white;
-  font-size: 20px;
+  background-color:goldenrod;
+  color: black;
+  font-size: 30px;
   margin: 15px auto;
-  border: 0;
+  border-style:solid;
+  border-color:black;
   padding: 10px 20px;
-  box-shadow: 0 10px #444;
+  /* box-shadow: 0 10px #444; */
   outline: none;
   cursor: pointer;
-  width: 60%;
+  width: 50%;
   text-align: center;
 }
 
@@ -235,7 +261,9 @@ canvas {
     flex-direction: column;
     width: 95%;
   }
-
+  .subheading{
+    text-align: center;
+  }
   canvas {
     max-height: 180px;
     margin: 10px auto;
@@ -287,6 +315,22 @@ canvas {
 
   .trainButton div {
     font-size: 4vw;
+  }
+  #inputClass button {
+    flex: 1;
+    border-radius: 10px;
+    background-color:goldenrod;
+    color: black;
+    font-size: 30px;
+    margin: 15px auto;
+    border-style:solid;
+    border-color:black;
+    padding: 10px 20px;
+    /* box-shadow: 0 10px #444; */
+    outline: none;
+    cursor: pointer;
+    width: 90%;
+    text-align: center;
   }
 
 }

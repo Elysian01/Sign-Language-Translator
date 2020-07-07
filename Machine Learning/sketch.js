@@ -8,11 +8,11 @@ let classes = [];
 let resultP;
 
 const CLASS_LIMIT = 8;
-const INITIAL_LABEL = "I need data🤩";
+const INITIAL_LABEL = "I need data";
 const CLASSNAME_BUTTON = "trainButton";
 const CAMERA_CONTAINER_ID = "input";
 const SNAPSHOTS_POSITION = 1;
-const TAKE_SNAP_TEXT = "Take example📸"
+const TAKE_SNAP_TEXT = "Take example"
 
 function setup() {
   input = select("#" + CAMERA_CONTAINER_ID);
