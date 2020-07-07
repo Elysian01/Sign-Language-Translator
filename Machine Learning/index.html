@@ -2,62 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Righteous&display=swap" rel="stylesheet">
-  <script src="ml5.min.js"></script>
-  <script src="p5.js"></script>
-  <script src="p5.sound.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style2.css">
-  <meta charset="utf-8">
-  <title>KNN Classifier</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
 
+     <!-- Load the latest version of TensorFlow.js -->
+     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
 </head>
 
 <body>
-  <!-- <header>
-  <h1 class="myheading" style="text-align: center;font-family: 'Pacifico', cursive;word-spacing: 10px;
-  ">SIGN  LANGUAGE  TRANSLATOR</h1>
-  
-<ul class="topnav">
-  <li><a class="active" href="#" >Training</a></li>
-  <li><a href="#" >Model & Voice</a></li>
-  <li><a href="#" >Video Call</a></li>
-  <li ><a href="#" >About</a></li>
-</ul>
-</header>
-<br><br><br><br><br> -->
-  <!-- <main> -->
+     <!-- for output of prediction -->
+     <div id="console"></div>
 
+     <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
 
-  <div id="container">
-
-    <!-- <h1 class="subheading">Training ! </h1> -->
-
-    <div id="input" class="tile"></div>
-    <div id="training" class="tile">
-      <div id="inputClass">
-        <div id="userInputClass">
-          <input id="inputClassName" type="text" placeholder="Class name here">
-          <input type="color" id="colorClass">
-        </div>
-        <button type="button" onclick="onAddClass()">Add New Class</button>
-      </div>
-      <div id="class-cont">
-        <!-- <div class="class">
-          <div class="snapshots"><img src="icon.png" alt=""></div>
-          <div id="ok" class="confidence" style="background-color: rgb(255, 0, 0); width: 50%;"></div>
-          <button class="trainButton" style="background-color: rgb(255, 0, 0);">
-            <div>TRAIN "ffsdfdsok"</div>
-          </button>
-        </div> -->
-      </div>
-    </div>
-
-  </div>
-  <!-- </main> -->
-  <script src="sketch.js"></script>
-
+     <br><br>
+     <!-- class Buttons -->
+     <div class="addClass">
+          <form action="" id="myform">
+               <input type="text" placeholder="Enter Class Name" name="class-name" />
+               <button class=" addNewClass" type="button"> Add new class</button>
+          </form>
+          <br><br>
+          <button id="class-a">Add A</button>
+          <button id="class-b">Add B</button>
+          <button id="class-c">Add C</button>
+     </div>
 </body>
+<script src="main.js"></script>
 
 </html>
