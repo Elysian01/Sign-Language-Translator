@@ -25,9 +25,11 @@ class AddContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrayclass: []
+            arrayclass: [],
+            classes: []
         }
         this.AddNewClass = this.AddNewClass.bind(this)
+        this.onFormSubmit = this.onFormSubmit.bind(this)
     }
     AddNewClass() {
         this.setState((prevState) => {
@@ -39,7 +41,23 @@ class AddContainer extends React.Component {
             console.log("c")
         })
     }
+
+    onFormSubmit(e) {
+        this.setState((prevState) => {
+            return {
+                classes: prevState.classes.concat(< key={this.state.classes.length}
+                    mykey={this.state.classes.length}
+                />)
+            }
+        })
+        e.preventDefault()
+        var x = document.getElementById('inputClassName').value
+        console.log(x)
+        classes
+    }
+
     render() {
+
         return (
 
             <div>
@@ -49,9 +67,12 @@ class AddContainer extends React.Component {
                 </div>
                 <br></br> */}
                 <div className="add-class text-center">
-                    <input id="inputClassName" type="text" placeholder="Class name here" />
-                    <button onClick={this.AddNewClass} className="dark btn-lg btn-shadow mr-5" >Add <i className="fas fa-plus fa-1x"></i></button>
+                    <form onSubmit={this.onFormSubmit}>
+                        <input id="inputClassName" type="text" placeholder="Enter Class Name Here" />
+                        <button onClick={this.AddNewClass} className="dark btn-lg btn-shadow mr-5" >Add <i className="fas fa-plus fa-1x"></i></button>
+                    </form>
                 </div>
+
 
                 <br></br> <br></br>
                 {this.state.arrayclass}
