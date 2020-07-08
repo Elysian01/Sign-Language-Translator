@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 
 
 
-import ModelVoice from './pages/Model&Voice'
+import ModelVoice from './pages/Model&Voice.js'
 
 
 

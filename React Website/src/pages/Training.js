@@ -9,8 +9,8 @@ class Training extends React.Component {
     render() {
         return (
             <div>
-                <Header></Header>
-                <Navigation training="active" />
+                <Navigation />
+                <Header text="Train Your Own Model"></Header>
                 <div class="row"  >
                     <div class="column flex-container">
                         <br></br>
