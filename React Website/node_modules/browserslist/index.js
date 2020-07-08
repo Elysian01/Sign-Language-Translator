@@ -505,7 +505,6 @@ function flatten (array) {
 }
 
 // Will be filled by Can I Use data below
-browserslist.cache = { }
 browserslist.data = { }
 browserslist.usage = {
   global: { },
@@ -886,20 +885,6 @@ var QUERIES = [
         if (coveraged >= coverage) break
       }
       return result
-    }
-  },
-  {
-    regexp: /^supports\s+([\w-]+)$/,
-    select: function (context, feature) {
-      env.loadFeature(browserslist.cache, feature)
-      var features = browserslist.cache[feature]
-      return Object.keys(features).reduce(function (result, version) {
-        var flags = features[version]
-        if (flags.indexOf('y') >= 0 || flags.indexOf('a') >= 0) {
-          result.push(version)
-        }
-        return result
-      }, [])
     }
   },
   {

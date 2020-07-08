@@ -17,47 +17,50 @@ import '../../css/style.css'
 //   return (
 //     <div> {inputList}
 //       <button onClick={onAddBtnClick}>Add input</button>
-     
+
 //     </div>
 //   );
 // };
-class AddContainer extends React.Component{
-    constructor(props){
+class AddContainer extends React.Component {
+    constructor(props) {
         super(props);
-        this.state={
-            arrayclass:[]
+        this.state = {
+            arrayclass: []
         }
-        this.AddNewClass=this.AddNewClass.bind(this)
+        this.AddNewClass = this.AddNewClass.bind(this)
     }
-    AddNewClass(){
-this.setState((prevState)=>{
-    return{
-arrayclass:prevState.arrayclass.concat(<TrainingCard key={this.state.arrayclass.length} 
-    mykey={this.state.arrayclass.length}
-    />)
+    AddNewClass() {
+        this.setState((prevState) => {
+            return {
+                arrayclass: prevState.arrayclass.concat(<TrainingCard key={this.state.arrayclass.length}
+                    mykey={this.state.arrayclass.length}
+                />)
+            }
+            console.log("c")
+        })
     }
-    console.log("c")
-})
-    }
-    render(){
-        return(<div><div className="model">
-<button className="loadmodel">Load Model</button>  
-<button className="savemodel">Save Model</button>     </div>   
-  <br></br>
-            <input placeholder="Enter your class" class="classinput" alt="Camera"></input>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+    render() {
+        return (
 
-            <button onClick={this.AddNewClass} className="addbutton">Add Class</button>
-            <br></br> <br></br>
-            {this.state.arrayclass}
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            </div>)
+            <div>
+                {/* <div className="model">
+                    <button className="loadmodel">Load Model</button>
+                    <button className="savemodel">Save Model</button>
+                </div>
+                <br></br> */}
+                <div className="add-class text-center">
+                    <input id="inputClassName" type="text" placeholder="Class name here" />
+                    <button onClick={this.AddNewClass} className="dark btn-lg btn-shadow mr-5" >Add <i className="fas fa-plus fa-1x"></i></button>
+                </div>
+
+                <br></br> <br></br>
+                {this.state.arrayclass}
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+            </div>
+        )
     }
 }
 export default AddContainer;
