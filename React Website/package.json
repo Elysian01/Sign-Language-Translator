@@ -17,11 +17,13 @@
     "babel-preset": "^1.1.6",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.5.0",
+    "css-loader": "^3.6.0",
     "live-server": "^1.2.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-webcam": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
