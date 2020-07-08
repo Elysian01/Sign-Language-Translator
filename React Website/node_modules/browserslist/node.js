@@ -1,4 +1,3 @@
-var feature = require('caniuse-lite/dist/unpacker/feature').default
 var region = require('caniuse-lite/dist/unpacker/region').default
 var path = require('path')
 var fs = require('fs')
@@ -238,21 +237,6 @@ module.exports = {
     }
   },
 
-  loadFeature: function loadFeature (features, name) {
-    name = name.replace(/[^\w-]/g, '')
-    if (features[name]) return
-
-    // eslint-disable-next-line security/detect-non-literal-require
-    var compressed = require('caniuse-lite/data/features/' + name + '.js')
-    var stats = feature(compressed).stats
-    features[name] = { }
-    for (var i in stats) {
-      for (var j in stats[i]) {
-        features[name][i + ' ' + j] = stats[i][j]
-      }
-    }
-  },
-
   parseConfig: function parseConfig (string) {
     var result = { defaults: [] }
     var sections = ['defaults']
@@ -353,8 +337,6 @@ module.exports = {
     dataTimeChecked = false
     filenessCache = { }
     configCache = { }
-
-    this.cache = { }
   },
 
   oldDataWarning: function oldDataWarning (agentsObj) {

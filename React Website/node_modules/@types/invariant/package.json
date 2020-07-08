@@ -1,0 +1,41 @@
+{
+    "name": "@types/invariant",
+    "version": "2.2.33",
+    "description": "TypeScript definitions for invariant",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "MichaelBennett",
+            "url": "https://github.com/bennett000",
+            "githubUsername": "bennett000"
+        },
+        {
+            "name": "dtinth",
+            "url": "https://github.com/dtinth",
+            "githubUsername": "dtinth"
+        },
+        {
+            "name": "Turadg Aleahmad",
+            "url": "https://github.com/turadg",
+            "githubUsername": "turadg"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "typesVersions": {
+        ">=3.7.0-0": {
+            "*": [
+                "ts3.7/*"
+            ]
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/invariant"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typesPublisherContentHash": "38d677f429d8d59b8f45f05827aea2cb84d4136ea64d588ec530e13225022bee",
+    "typeScriptVersion": "3.0"
+}
