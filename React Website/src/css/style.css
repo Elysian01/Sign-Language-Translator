@@ -307,6 +307,10 @@ body {
      background-color: #fff;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
      margin: auto;
      width:80%;

@@ -6,7 +6,6 @@ import ReactDOM from "react-dom";
 import TrainingCard from './TrainingCard';
 import '../../css/style.css'
 
-
 // const Form = () => {
 //   const [inputList, setInputList] = useState([]);
 
@@ -24,37 +23,40 @@ import '../../css/style.css'
 class AddContainer extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            arrayclass: [],
-            classes: []
+            classes: [],
+            name: "",
+            number: 0
         }
-        this.AddNewClass = this.AddNewClass.bind(this)
-        this.onFormSubmit = this.onFormSubmit.bind(this)
     }
-    AddNewClass() {
-        this.setState((prevState) => {
-            return {
-                arrayclass: prevState.arrayclass.concat(<TrainingCard key={this.state.arrayclass.length}
-                    mykey={this.state.arrayclass.length}
-                />)
-            }
-            console.log("c")
+
+
+
+
+    setCard = (element) => {
+        this.setState({
+            name: element.target.value
         })
     }
 
-    onFormSubmit(e) {
-        this.setState((prevState) => {
-            return {
-                classes: prevState.classes.concat(< key={this.state.classes.length}
-                    mykey={this.state.classes.length}
-                />)
-            }
+    AddNewClass = (e) => {
+        this.setState((prevState) => { return { number: prevState.number + 1 } })
+        const copyCardArray = Object.assign([], this.state.classes)
+        copyCardArray.push(
+            {
+                name: this.state.name,
+                count: 0,
+                number: this.state.number
+            })
+        this.setState({
+            classes: copyCardArray
         })
-        e.preventDefault()
-        var x = document.getElementById('inputClassName').value
-        console.log(x)
-        classes
+        const inputClass = document.getElementById("inputClassName")
+        inputClass.value = "";
+        console.log(this.state);
     }
+
 
     render() {
 
@@ -67,19 +69,19 @@ class AddContainer extends React.Component {
                 </div>
                 <br></br> */}
                 <div className="add-class text-center">
-                    <form onSubmit={this.onFormSubmit}>
-                        <input id="inputClassName" type="text" placeholder="Enter Class Name Here" />
-                        <button onClick={this.AddNewClass} className="dark btn-lg btn-shadow mr-5" >Add <i className="fas fa-plus fa-1x"></i></button>
-                    </form>
+                    <input id="inputClassName" type="text" onBlur={this.setCard} placeholder="Enter Class Name Here" />
+                    <button onClick={this.AddNewClass} className="dark btn-lg btn-shadow mr-5" >Add <i className="fas fa-plus fa-1x"></i></button>
                 </div>
 
-
-                <br></br> <br></br>
-                {this.state.arrayclass}
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+                <ul>
+                    {
+                        this.state.classes.map((card, index) => {
+                            return (
+                                <TrainingCard name={card.name} count={card.count} number={card.number} classes={this.state.classes} />
+                            )
+                        })
+                    }
+                </ul>
             </div>
         )
     }
