@@ -1,11 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-
-
-
-
-import ModelVoice from './pages/Model&Voice.js'
+import Router from '../src/components/router/Router'
 
 
 
@@ -17,4 +12,4 @@ import ModelVoice from './pages/Model&Voice.js'
 
 
 
-ReactDOM.render(<ModelVoice />, document.getElementById('app'))
+ReactDOM.render(<Router />, document.getElementById('app'))

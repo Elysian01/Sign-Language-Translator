@@ -14,7 +14,7 @@ const Camera = () => {
   }, [webcamRef, setImgSrc]);
   // <div class="video" style={{position: "relative",top:"100px" ,left:"200px"}}>
 
-  return (
+  return (<div>
     <div class="video" >
       <Webcam 
       className="modelcam"
@@ -23,6 +23,7 @@ const Camera = () => {
         screenshotFormat="image/jpeg"
       
       />
+      </div>                <button className="dark btn-lg btn-shadow">Next step <i class="fas fa-arrow-right"></i></button>
       </div>
   )
 }

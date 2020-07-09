@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --watch",
-    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "dev-server": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +25,8 @@
     "react-file-system": "^1.0.4",
     "react-router-dom": "^5.2.0",
     "react-webcam": "^5.2.0",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
