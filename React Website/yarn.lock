@@ -4383,6 +4383,11 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
+react-file-system@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-file-system/-/react-file-system-1.0.4.tgz#04b641d71f721f034dd96943a7432044d33c4d02"
+  integrity sha512-zhC0gJYjEnHwbqsEwMIkVWWsgoIMj7Rnc5io3XGJpqaCssjsSjjRJhFIz+PKkWq1uptM2fwMSQDaYTa7/JI1RA==
+
 react-is@^16.3.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"

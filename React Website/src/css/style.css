@@ -6,6 +6,7 @@
 
 }
 
+
 ul.topnav {
     list-style-type: none;
     margin: 0;
@@ -105,6 +106,13 @@ border-color:black;
   width:445px;
   border-radius:5%;
   height:365px;
+  box-shadow: 8px 6px #ccc;
+  margin-top: 20%;
+}
+.modelcam{
+  width:454px;
+  border-radius:5%;
+  height:340px;
   box-shadow: 8px 6px #ccc;
   margin-top: 20%;
 }
@@ -292,6 +300,14 @@ background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
     display: inline-block;
     width: 65%;
     margin-left: 18%
+  }
+  .modelcam{
+    width:295px;
+    margin-left:-1%;
+    border-radius:5%;
+    height:243px;
+    box-shadow: 8px 6px #ccc;
+    margin-top: 10%;
   }
 }
 
