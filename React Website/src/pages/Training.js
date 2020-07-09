@@ -17,7 +17,7 @@ class Training extends React.Component {
                         <Webcam className="mycam"></Webcam>
                     </div>
                     <div class="column flex-2-container">
-                        <AddContainer></AddContainer>
+                    <AddContainer></AddContainer>
                     </div>
                 </div>
 

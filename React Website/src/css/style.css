@@ -5,66 +5,155 @@
     font-size: xx-large;
 
 }
+.togglebtn{
+  background-color: transparent;
+  border:none;
+  color:white;
+  font-size:40px;
+  padding:0px;
+
+}
+.togglebtn:focus{
+  text-decoration: none;
+  border:none;
+  outline:none;
+}
+textarea{
+  margin-top: 50px;
+  font-size: 20px;
+  box-shadow: 3px 8px #ccc;
+  background-color: #fafafa;
+  outline: none;
+  max-width:350px;
+  width:350px;
+  height: 150px;
+  padding:10px;
+  resize: none;
+
+  overflow:none;
+  border:none;
+  text-align: center;
+  border-radius: 10px;
 
 
-ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+}
+.convert{
+
+  text-align: center;
+  justify-content: center;
+  margin: 0.5rem 1rem;
+    margin-left:27%;
+  font-size: x-large;
+  padding: 0.5rem 1.5rem;
+
+}
+textarea::placeholder{
+  color:black;
+}
+
+textarea:focus::placeholder {
+  color: transparent;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+span{
+  color:#ff9900;
+}
+
+.navbar {
+  font-size: 18px;
+  background-color: #222;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 40px 10px 50px;
+  padding-bottom: 10px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.logo:hover,
+  li a:hover {
+      color: #ff9900;
+  } 
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 2.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center;
   }
-  a{
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-   /* margin-right:100px; */
-  
+
+  .main-nav {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
   }
-  
-  ul.topnav li {float: left;}
-  
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  hr{
+      display: block;
   }
-  
-  
-  
-  ul.topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    /* padding: 14px 16px; */
-    padding-top:14px;
-    padding-bottom:14px;
-    padding-left:156px;
-    padding-right: 156px;
-    text-decoration: none;
+  .main-nav li {
+      margin: 0;
   }
-  
-  ul.topnav li a:hover:not(.active) {background-color: #111;}
-  
-  ul.topnav li a.active {background-color: #4CAF50;}
-  
-  ul.topnav li.right {float: right;}
-  
-  @media screen and (max-width: 600px) {
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
-    ul.topnav li a {
-        display: block;
-        color:white;
-        text-align: center;
-        /* padding: 14px 16px; */
-        padding-top:14px;
-        padding-bottom:14px;
-        padding-left:106px;
-        padding-right: 106px;
-        text-decoration:none;
+
+  .nav-links {
+      margin-left: 40px;
   }
+
+  .logo {
+      margin-top: 0;
   }
+
+  .navbar-toggle {
+      display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+      color: #ff9900;
+  }
+}
+
   .column {
   float: left;
   width: 50%;
@@ -114,8 +203,9 @@ border-color:black;
   border-radius:5%;
   height:340px;
   box-shadow: 8px 6px #ccc;
-  margin-top: 20%;
+margin-top:-20%;
 }
+
 
 .flex-container {
   display: flex;
@@ -360,6 +450,24 @@ li {
   max-width:350px;
   display: flex;
   flex-direction: column;
+}
+.texttospeech{
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  border: 0;
+  
+  margin: 2rem 10px;
+  margin-top:-1px;
+  font-size: 20px;
+  box-shadow: 3px 8px #ccc;
+  outline: none;
+  max-width:350px;
+  height:33px;
+  display: flex;
+  flex-direction: column;
+
+
 }
 
 .grey-bg h3 {
