@@ -457,7 +457,7 @@ body {
   font-size: 20px;
   box-shadow: 3px 8px #ccc;
   outline: none;
-  max-width:350px;
+  max-width:400px;
   display: flex;
   flex-direction: column;
 }
@@ -483,7 +483,7 @@ body {
 .grey-bg h3 {
      display: inline;
      padding: 0.5rem;
-     margin: 0.6rem auto;
+     margin: 0.6rem 0.1rem;
      color:#fe4a49 ;
 }
 .grey-bg span {
@@ -496,7 +496,7 @@ body {
      color: #fff;
      padding:5px 15px;
      border-radius: 4px;
-     margin: 0px auto;
+     margin: 5px auto;
    
 }
 

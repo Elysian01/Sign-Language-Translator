@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Language Translator</title>
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
     <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
         crossorigin="anonymous"></script>
-    <script>
 
-    </script>
+    <script src="../javascript/main.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
@@ -26,7 +25,7 @@
         <h5><a href="#" class="logo">Sign Language <span>Translator</span></a></h5>
         <ul class="main-nav" id="js-menu">
             <li>
-<a href="#" class="nav-links">Training</a>
+                <a href="#" class="nav-links">Training</a>
             </li>
 
             <li>
@@ -41,10 +40,16 @@
 
         </ul>
     </nav>
-    <div class="alert alert-success" >
-Please train atleast 30 images for more information click here <a href="#" >www.youtube.com</a>
+
+
+    <div class="alert alert-success">
+        Please train atleast 30 images for each class and,for more information
+        <a href="#" style="color: green;">click
+            here </a>
     </div>
-    <h1 class="myheading">Train Your Own Model</h1>
+
+
+    <h1 class="myheading"><i class="fab fa-joomla"></i> Train Your Own Model</h1><br>
 
     <div class="row">
         <div class="column flex-container">
@@ -54,57 +59,60 @@ Please train atleast 30 images for more information click here <a href="#" >www.
 
                 <div class="grey-bg">
                     <div class="row text-center">
-                        <h3>Prediction: <span>How are you ?</span></h3>
-                        <h3>Probability : <span>50%</span></h3>
+                        <h3>Prediction: <span id="predictions"></span></h3>
+                        <h3>Probability : <span id="confidence"></span> %</h3>
                     </div>
                 </div>
 
-                <button class="dark btn-lg btn-shadow">Next step <i class="fas fa-arrow-right"></i></button>
+                <button class="dark btn-lg btn-shadow">Next step <i class="fas fa-arrow-right"></i></button><br><br>
             </div>
             <!-- <Webcam class="mycam"></Webcam> -->
         </div>
+
+
         <div class="column flex-2-container">
             <!-- <AddContainer></AddContainer> -->
             <div>
-                 <div class="model">
-                <button class="dark btn-lg btn-shadow mr-5">Load Model</button>
-                <butto+n class="dark btn-lg btn-shadow mr-5">Save Model</button>
-            </div>
-            <br></br> 
+                <div class="model">
+                    <!-- <button class="dark btn-lg btn-shadow mr-5" id="load_button"><i class="fas fa-upload"></i> Load
+                        Model</button> -->
+                    <button class="dark btn-lg btn-shadow mr-5" id="save_button"><i class="fas fa-download"></i>
+                        Download Model</button>
+                </div>
+                <br>
+
 
                 <div class="add-class text-center">
-
                     <input id="inputClassName" type="text" placeholder="Enter Class Name Here" name="option" />
-                    <button class="dark btn-lg btn-shadow mr-5">Add <i class="fas fa-plus fa-1x"></i></button>
-
+                    <button class="dark btn-lg btn-shadow mr-5" id="add-button">Add <i
+                            class="fas fa-plus fa-1x"></i></button>
                 </div>
-                <div>
-                    <div class="grey-bg">
+                <br>
+
+
+                <div id="training-cards">
+
+                    <!-- <div class="grey-bg">
                         <div class="text-center">
-                            <h3>Classes<h3>
-                                    <h3>Images: <span>50</span></h3>
+                            <h3>Class Name : <span>How are you?</span></h3>
+                            <h3>Images : <span>50</span></h3>
                         </div>
                         <div>
                             <button class="dark btn-spread btn-shadow mr-5">Add New Images <i
                                     class="fas fa-plus fa-1x"></i>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <!-- <TrainingCard options={this.state.options} /> -->
-                <br></br> <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+
+
             </div>
         </div>
     </div>
 
 
+
     <script>
-
-
         let mainNav = document.getElementById('js-menu');
         let navBarToggle = document.getElementById('js-navbar-toggle');
 
@@ -114,7 +122,7 @@ Please train atleast 30 images for more information click here <a href="#" >www.
     </script>
 
 
-<script src="../javascript/main.js"></script>
+
 </body>
 
 </html>
