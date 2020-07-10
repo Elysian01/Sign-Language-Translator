@@ -1,213 +1,250 @@
-{% extends "layout.html" %}{% block content %}
-<br>
-<h1 class="text-center" style="    font-family: 'Pacifico',cursive;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Translator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
+        </span>
+        <h5><a href="{{ url_for('Tutorial')}}" class="logo">Sign Language <span>Translator</span></a></h5>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="{{ url_for('Tutorial')}}" class="nav-links">Tutorials</a>
+            </li>
+            <li>
+                <a href="{{ url_for('Training')}}" class="nav-links">Training</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('Model')}}" class="nav-links">Model & Voice</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('About') }}" class="nav-links">About</a>
+            </li>
+
+        </ul>
+    </nav>
+    <br>
+    <h1 class="text-center" style="    font-family: 'Pacifico',cursive;
     "> Know More About Us ?</h1>
-<br><br>
+    <br><br>
 
-<div class="youtube">
-    <iframe width="660" height="415" frameborder="0" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0">
-    </iframe></div>
-<br> <br>
+    <div class="youtube">
+        <iframe width="660" height="415" frameborder="0" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0">
+        </iframe></div>
+    <br> <br>
 
 
-<div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
-    <h5 class="card-header text-center" style="font-size: 26px;margin-bottom: 20px;">Our Goal <span
-            style="color:ff9900"><i class="fas fa-bullseye"></i></span>
-    </h5>
-    <div class="card-body">
-        <h5 class="card-title text-center" style="font-size: larger;"> Many desktop publishing packages and web page
-            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
-            many web sites still in their infancy. Various versions have evolved over the years, sometimes by
-            accident, sometimes on purpose (injected humour and the like).</h5>
+    <div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
+        <h5 class="card-header text-center" style="font-size: 26px;margin-bottom: 20px;">Our Goal <span
+                style="color:#ff9900"><i class="fas fa-bullseye"></i></span>
+        </h5>
+        <div class="card-body">
+            <h5 class="card-title text-center" style="font-size: larger;"> Many desktop publishing packages and web page
+                editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
+                many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+                accident, sometimes on purpose (injected humour and the like).</h5>
 
+        </div>
     </div>
-</div>
-<br> <br> <br> <br>
-<br>
-<div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
-    <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px;">Train Your Model <span
-            style="color:ff9900"><i class="fab fa-joomla ml-"></i> </span>
-    </h5>
-    <div class="card-body">
-        <h5 class="card-title text-center" style="font-size: larger;"> All the Lorem Ipsum generators on the
-            Internet tend to repeat predefined chunks as necessary, making this the first true generator on the
-            Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
-            structures, to generate Lorem Ipsum which looks reasonable.</h5>
-        <div class="buttoncenter">
-            <div>
-                <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span style="color:#fafafa">Training
-                        </span> </button></a>
+    <br> <br> <br> <br>
+    <br>
+    <div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
+        <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px;">Train Your Model <span
+                style="color:#ff9900"><i class="fab fa-joomla ml-"></i> </span>
+        </h5>
+        <div class="card-body">
+            <h5 class="card-title text-center" style="font-size: larger;"> All the Lorem Ipsum generators on the
+                Internet tend to repeat predefined chunks as necessary, making this the first true generator on the
+                Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable.</h5>
+            <div class="buttoncenter">
+                <div>
+                    <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span
+                                style="color:#fafafa">Training </span> </button></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<br> <br>
-<br> <br>
+    <br> <br>
+    <br> <br>
 
-<br>
-<div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
-    <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px;">Pretained Model & Voice System
-        <span style="color:ff9900"><i class="fas fa-microphone ml-"></i></span>
-    </h5>
-    <div class="card-body">
-        <h5 class="card-title text-center " style="font-size: larger;">It is a long established fact that a reader
-            will be distracted by the readable content of a page when looking at its layout. The point of using
-            Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-            here, content here', making it look like readable English.</h5>
-        <div class="buttoncenter">
-            <div>
-                <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span style="color:#fafafa">Model &
-                            Voice </span> </button></a>
+    <br>
+    <div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
+        <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px;">Pretained Model & Voice System
+            <span style="color:#ff9900"><i class="fas fa-microphone ml-"></i></span>
+        </h5>
+        <div class="card-body">
+            <h5 class="card-title text-center " style="font-size: larger;">It is a long established fact that a reader
+                will be distracted by the readable content of a page when looking at its layout. The point of using
+                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                here, content here', making it look like readable English.</h5>
+            <div class="buttoncenter">
+                <div>
+                    <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span style="color:#fafafa">Model
+                                & Voice </span> </button></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<br> <br><br> <br> <br>
+    <br> <br><br> <br> <br>
 
-<div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
-    <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px; ">Tutorial <span
-            style="color:ff9900"><i class="fas fa-chalkboard ml-" style="color:ff9900"></i></span>
-    </h5>
-    <div class="card-body">
-        <h5 class="card-title text-center" style="font-size: larger;">There are many variations of passages of Lorem
-            Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
-            randomised words which don't look even slightly believable. If you are going to use a passage of Lorem
-            Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text</h5>
-        <div class="buttoncenter">
-            <div>
-                <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span style="color:#fafafa">Tutorial
-                        </span> </button></a>
+    <div class="card" style="width: 70%;margin-left:15%;margin-right:15%">
+        <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px; ">Tutorial <span
+                style="color:#ff9900"><i class="fas fa-chalkboard ml-" style="color:ff9900"></i></span>
+        </h5>
+        <div class="card-body">
+            <h5 class="card-title text-center" style="font-size: larger;">There are many variations of passages of Lorem
+                Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+                randomised words which don't look even slightly believable. If you are going to use a passage of Lorem
+                Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text</h5>
+            <div class="buttoncenter">
+                <div>
+                    <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span
+                                style="color:#fafafa">Tutorial </span> </button></a>
+                </div>
             </div>
+
         </div>
-
     </div>
-</div>
-<br> <br> <br>
-<div class="githubdiv">
-    <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span style="color:#fafafa"><i
-                    class="fab fa-github " style="margin-right:1rem"></i>Open Source Project on Github </span>
-        </button></a>
-</div>
-</div>
-<br> <br>
+    <br> <br> <br>
+    <div class="githubdiv">
+        <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span style="color:#fafafa"><i
+                        class="fab fa-github " style="margin-right:1rem"></i>Open Source Project on Github </span>
+            </button></a>
+    </div>
+    </div>
+    <br> <br>
 
-<footer>
-    <div class="aboutfooter" style="color:ff9900">
-        <div class="grid-container" style="background-color: #394043;align-content: center;">
+    <footer>
+        <div class="aboutfooter" style="color:ff9900">
+            <div class="grid-container" style="background-color: #394043;align-content: center;">
 
-            <div class="card"
-                style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
-                <div class="card-body text-center">
-                    <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
-                        <br>
-                        GUPTA ABHISHEK MANILAL
-                        <br>
-                        <span class="text-center">
-                            <a href="mailto:abhig0209@gmail.com">
-                                <img src="https://img.icons8.com/color/30/000000/gmail.png">
+                <div class="card"
+                    style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
+                            <br>
+                            GUPTA ABHISHEK MANILAL
+                            <br>
+                            <span class="text-center">
+                                <a href="mailto:abhig0209@gmail.com">
+                                    <img src="https://img.icons8.com/color/30/000000/gmail.png">
 
 
-                            </a>
-                            <a href="https://www.linkedin.com/in/abhishek-gupta-a745221a0/">
-                                <img src="https://img.icons8.com/color/28/000000/linkedin.png">
-                            </a>
-                            <a href="https://github.com/Elysian01">
-                                <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
+                                </a>
+                                <a href="https://www.linkedin.com/in/abhishek-gupta-a745221a0/">
+                                    <img src="https://img.icons8.com/color/28/000000/linkedin.png">
+                                </a>
+                                <a href="https://github.com/Elysian01">
+                                    <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
 
-                            </a>
-                        </span>
+                                </a>
+                            </span>
 
-                    </h5>
+                        </h5>
+                    </div>
                 </div>
-            </div>
-            <div class="card"
-                style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
+                <div class="card"
+                    style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
 
-                <div class="card-body">
-                    <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
-                        <br>
+                    <div class="card-body">
+                        <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
+                            <br>
 
-                        ANSH MITESH CHHADVA
-                        <br>
+                            ANSH MITESH CHHADVA
+                            <br>
 
-                        <span class="text-center">
+                            <span class="text-center">
 
-                            <a href="mailto:anshmiteshchhadva@gmail.com">
-                                <img src="https://img.icons8.com/color/30/000000/gmail.png">
+                                <a href="mailto:anshmiteshchhadva@gmail.com">
+                                    <img src="https://img.icons8.com/color/30/000000/gmail.png">
 
 
-                            </a>
-                            <a href="https://www.linkedin.com/in/ansh-chhadva-ab3902183/">
-                                <img src="https://img.icons8.com/color/28/000000/linkedin.png">
-                            </a>
-                            <a href="https://github.com/ansh0812">
-                                <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
+                                </a>
+                                <a href="https://www.linkedin.com/in/ansh-chhadva-ab3902183/">
+                                    <img src="https://img.icons8.com/color/28/000000/linkedin.png">
+                                </a>
+                                <a href="https://github.com/ansh0812">
+                                    <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
 
-                            </a>
-                        </span>
+                                </a>
+                            </span>
 
-                    </h5>
+                        </h5>
+                    </div>
                 </div>
-            </div>
-            <div class="card"
-                style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
+                <div class="card"
+                    style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
 
-                <div class="card-body">
-                    <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
-                        <br>
-                        GLADINA RAYMOND
-                        <br>
+                    <div class="card-body">
+                        <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
+                            <br>
+                            GLADINA RAYMOND
+                            <br>
 
-                        <span class="text-center">
-                            <a href="mailto:rrcg2000@gmail.com">
-                                <img src="https://img.icons8.com/color/30/000000/gmail.png">
+                            <span class="text-center">
+                                <a href="mailto:rrcg2000@gmail.com">
+                                    <img src="https://img.icons8.com/color/30/000000/gmail.png">
 
 
-                            </a>
-                            <a href="https://www.linkedin.com/in/gladina-raymond-2a56a8194/">
-                                <img src="https://img.icons8.com/color/28/000000/linkedin.png">
-                            </a>
-                            <a href="https://github.com/Elysian01">
-                                <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
+                                </a>
+                                <a href="https://www.linkedin.com/in/gladina-raymond-2a56a8194/">
+                                    <img src="https://img.icons8.com/color/28/000000/linkedin.png">
+                                </a>
+                                <a href="https://github.com/Elysian01">
+                                    <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
 
-                            </a>
-                        </span>
+                                </a>
+                            </span>
 
-                    </h5>
+                        </h5>
+                    </div>
                 </div>
-            </div>
-            <div class="card"
-                style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
-                <!-- <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px; ">Tutorial <span
+                <div class="card"
+                    style="background-color: #394043;border: none;color:#fafafa;margin-top: 30px;margin-bottom: 30px;">
+                    <!-- <h5 class="card-header text-center " style="font-size: 26px;margin-bottom: 20px; ">Tutorial <span
                             style="color:ff9900"><i class="fas fa-chalkboard ml-" style="color:ff9900"></i></span>
                     </h5> -->
-                <div class="card-body">
-                    <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
-                        <br>
-                        ABDUL AZIM RAJMOHAMED
-                        <br>
+                    <div class="card-body">
+                        <h5 class="card-title text-center" style="font-size: 20px;padding-bottom:-50px;">
+                            <br>
+                            ABDUL AZIM RAJMOHAMED
+                            <br>
 
-                        <span class="text-center">
-                            <a href="mailto:abdulazim0402@gmail.com">
-                                <img src="https://img.icons8.com/color/30/000000/gmail.png">
+                            <span class="text-center">
+                                <a href="mailto:abdulazim0402@gmail.com">
+                                    <img src="https://img.icons8.com/color/30/000000/gmail.png">
 
 
-                            </a>
-                            <a href="https://www.linkedin.com/in/abdul-azim-08087019b/">
-                                <img src="https://img.icons8.com/color/28/000000/linkedin.png">
-                            </a>
-                            <a href="https://github.com/Elysian01">
-                                <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
+                                </a>
+                                <a href="https://www.linkedin.com/in/abdul-azim-08087019b/">
+                                    <img src="https://img.icons8.com/color/28/000000/linkedin.png">
+                                </a>
+                                <a href="https://github.com/Elysian01">
+                                    <img src="https://img.icons8.com/material-sharp/30/000000/github.png">
 
-                            </a>
-                        </span>
+                                </a>
+                            </span>
 
-                    </h5>
+                        </h5>
+                    </div>
                 </div>
             </div>
+
         </div>
+    </footer>
 
-    </div>
-</footer>
+</body>
 
-{% endblock %}
+</html>

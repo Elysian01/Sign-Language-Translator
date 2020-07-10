@@ -582,4 +582,93 @@ background-color: #2ab7ca;
 
 
 
+/* 
 
+
+*/
+
+.text-center {
+    text-align: center;
+}
+
+.youtube {
+    display: flex;
+    justify-content: center;
+  
+}
+    .dark {
+        background-color: #394043;
+        border:none;
+        color: #fff;
+        padding:5px 15px;
+        border-radius: 4px;
+        margin: 5px auto;
+    }
+    @media screen and  (max-width: 600px) {
+        .grid-container{
+      height: auto;
+          grid-template-columns: auto !important ;
+        }} 
+  
+  .grid-container{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto ;
+  }
+  
+  .githubdiv{
+  
+    display: flex;
+    justify-content: center;
+  }
+  iframe{
+    box-shadow: 3px 8px #ccc;
+  
+  }
+  .card {
+    justify-content: center;
+    /* box-shadow: 3px 8px #ccc; */
+  
+    position: relative;
+     
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+  }
+  *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+  }
+  .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    /* background-color: rgba(0,0,0,.03); */
+    background-color: #394043;
+  color:white;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+  }
+  .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+  }
+  .card-title{
+    margin-bottom: .75rem;
+  }
+  .buttoncenter{
+    display: flex;
+    justify-content: center;
+  }
+  .bton{
+    text-align: center;
+    justify-content: center;
+    margin: 0.5rem 1rem;
+    font-size: x-large;
+    padding: 0.5rem 1.5rem;
+  }
