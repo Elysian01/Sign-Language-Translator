@@ -8,12 +8,12 @@ app = Flask(__name__)
 @app.route("/home")
 def Training():
     # cases, cured, death = CurrentStats.currentStatus()
-    return render_template("Training.html")
+    return render_template("Training.html" )
 
 
 @app.route("/tutorial")
 def Tutorial():
-    return render_template("Tutorials.html")
+    return render_template("Tutorials.html" )
 
 
 @app.route("/model")
@@ -23,7 +23,7 @@ def Model():
 
 @app.route("/about")
 def About():
-    return render_template("About.html")
+    return render_template("About.html" )
 
 
 @app.errorhandler(404)

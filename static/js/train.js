@@ -2,12 +2,22 @@ const gifs_files = ['0-address.gif', '1-ahemdabad.gif', '2-all.gif', '3-any ques
 const letters = ['a.gif', 'b.gif', 'c.gif', 'd.gif', 'e.gif', 'f.gif', 'g.gif', 'h.gif', 'i.gif', 'j.gif', 'k.gif', 'l.gif', 'm.gif', 'n.gif', 'o.gif', 'p.gif', 'q.gif', 'r.gif', 's.gif', 't.gif', 'u.gif', 'v.gif', 'w.gif', 'x.gif', 'y.gif', 'z.gif']
 // console.log(gifs_files[10])
 
-buttons_ids = [0, 12, 3, 4]
-for (id of buttons_ids) {
-     console.log(id)
-     document.getElementById(id.toString()).addEventListener('click', () => load_image(id));
+const imageLoader = document.getElementById("image-loader")
+
+const start = async () => {
+     buttons_ids = [47,79,20,53,81,83,56,62,29,33,34,54,5,11,3,68];
+     for (id of buttons_ids) {
+          document.getElementById(id.toString()).addEventListener('click', (e) => load_image(e.target.value));
+     };
+
+     const load_image = async (val) => {
+          console.log(val);
+          var path = "../static/ISL_Gifs/" + gifs_files[val];
+          console.log(path)
+          imageLoader.innerHTML = '<img src='+ path +' class="tutorial-image">'
+     } ;
 }
 
-const load_image = (id) => {
-
-} 
+window.onload = () => {
+     start();
+};

@@ -19,6 +19,9 @@
     font-size: xx-large;
 
 }
+button{
+  outline: none;
+}
 .togglebtn{
   background-color: transparent;
   border:none;
@@ -580,13 +583,6 @@ background-color: #2ab7ca;
      text-align: center;
 }
 
-
-
-/* 
-
-
-*/
-
 .text-center {
     text-align: center;
 }
@@ -604,7 +600,13 @@ background-color: #2ab7ca;
         border-radius: 4px;
         margin: 5px auto;
     }
+    .in-column{
+      margin-left: 30%;
+    }
     @media screen and  (max-width: 600px) {
+      .in-column{
+        margin-left: 0%;
+      }
         .grid-container{
       height: auto;
           grid-template-columns: auto !important ;
@@ -672,3 +674,116 @@ background-color: #2ab7ca;
     font-size: x-large;
     padding: 0.5rem 1.5rem;
   }
+
+
+
+/* Tutorials */
+
+
+.tut-container{
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: auto auto  ;
+
+}
+.outer-column{
+  display: flex;
+  justify-content: space-evenly;
+
+
+}
+
+.signimage{
+  width:260px;
+  height:365px;
+  margin-left:-35%;
+}
+.grey-bgs li {
+  list-style: none;
+  width:200px;
+}
+.column {
+  /* margin:px; */
+  padding:0px;
+  /* float:left;
+  width:50%; */
+}
+.center {
+  text-align: center;
+}
+
+.grey-bgs  li button {
+  font-size: large;
+  padding:0px;
+  margin:0.5rem 0.3rem;
+  border:none;
+  background-color: #fafafa; 
+}
+.grey-bgs{
+  /* padding: 5px 10px; */
+  padding:10px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  border: 0;
+
+  margin: 2rem 10px;
+  margin-top:-10%;
+  font-size: 20px;
+  box-shadow: 3px 8px #ccc;
+  outline: none;
+  max-width:400px;
+  /* width:500px; */
+  display: flex;
+  flex-direction: column;
+}
+.tutorial-image{
+  width: 600px;height: 350px;
+}
+@media screen and  (max-width: 600px) {
+  .tutorial-image{
+    width: 300px;height: 300px;
+  } 
+.tut-container{
+  display: grid;
+  /* justify-content: center;
+  align-items: center; */
+  grid-template-columns: auto   ;
+
+}
+
+
+.signimage{
+  width:260px;
+  height:365px;
+  margin-left:20%;
+  margin-right:20%;
+}
+.outer-column{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto   ;
+
+
+}
+.grey-bgs{
+  /* padding: 5px 10px; */
+  padding:10px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  border: 0;
+  /* margin: 2rem 10px; */
+margin-left:5%;
+  font-size: 20px;
+  box-shadow: 3px 8px #ccc;
+  outline: none;
+  max-width:400px;
+  /* width:500px; */
+  display: flex;
+  flex-direction: column;
+}
+.column{
+  height: auto;
+}
+
+
+} 
