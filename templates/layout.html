@@ -25,7 +25,7 @@
           <span class="navbar-toggle" id="js-navbar-toggle">
                <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
           </span>
-          <h5><a href="{{ url_for('Training')}}" class="logo">Sign Language <span>Translator</span></a></h5>
+          <h5><a href="{{ url_for('Tutorial')}}" class="logo">Sign Language <span>Translator</span></a></h5>
           <ul class="main-nav" id="js-menu">
                <li>
                     <a href="{{ url_for('Tutorial')}}" class="nav-links">Tutorials</a>
@@ -39,7 +39,7 @@
                </li>
 
                <li>
-                    <a href="#" class="nav-links">About</a>
+                    <a href="{{ url_for('About') }}" class="nav-links">About</a>
                </li>
 
           </ul>
