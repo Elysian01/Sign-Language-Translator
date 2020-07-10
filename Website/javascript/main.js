@@ -48,8 +48,6 @@ const start = async () => {
           const inputClassName = document.getElementById("inputClassName").value
           document.getElementById('add-button').addEventListener('click', () => addClass(inputClassName));
 
-          document.getElementById('save_button').addEventListener('click', async () => downloadModel(knnClassifierModel));
-
      };
 
      const addDatasetClass = async (classId) => {
@@ -77,26 +75,6 @@ const start = async () => {
      };
 
 
-     const saveClassifier = async (classifierModel) => {
-          let datasets = await classifierModel.getClassifierDataset();
-          let datasetObject = {};
-          Object.keys(datasets).forEach(async (key) => {
-               let data = await datasets[key].dataSync();
-               datasetObject[key] = Array.from(data);
-          });
-          let jsonModel = JSON.stringify(datasetObject);
-
-          let downloader = document.createElement('a');
-          downloader.download = "model.json";
-          downloader.href = 'data:text/text;charset=utf-8,' + encodeURIComponent(jsonModel);
-          document.body.appendChild(downloader);
-          downloader.click();
-          downloader.remove();
-     };
-
-     const downloadModel = async (classifierModel) => {
-          saveClassifier(classifierModel);
-     };
 
      const imageClassificationWithTransferLearningOnWebcam = async () => {
           console.log("Machine Learning on the web is ready");
