@@ -8,6 +8,7 @@ Function to rename gif files
 path = "D:\\IT\\Projects\\Sign-Language-Translator\\static\\ISL_Gifs\\"
 
 files = [0 for i in range(86)]
+letters = [chr(letter) for letter in range(97, 123)]
 
 
 def rename_gifs():
@@ -28,6 +29,7 @@ def create_dict_of_files():
 
 
 if __name__ == '__main__':
-    print(files)
-    print(create_dict_of_files())
+    print(letters)
+    #     print(files)
+    #     print(create_dict_of_files())
     #     rename_gifs()
