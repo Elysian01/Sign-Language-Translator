@@ -1,4 +1,45 @@
-{% extends "layout.html" %}{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sign Language Translator</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+     <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+     <nav class="navbar">
+          <span class="navbar-toggle" id="js-navbar-toggle">
+               <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
+          </span>
+          <h5><a href="{{ url_for('Tutorial')}}" class="logo">Sign Language <span>Translator</span></a></h5>
+          <ul class="main-nav" id="js-menu">
+               <li>
+                    <a href="{{ url_for('Tutorial')}}" class="nav-links">Tutorials</a>
+               </li>
+               <li>
+                    <a href="{{ url_for('Training')}}" class="nav-links">Training</a>
+               </li>
+
+               <li>
+                    <a href="{{ url_for('Model')}}" class="nav-links">Model & Voice</a>
+               </li>
+
+               <li>
+                    <a href="{{ url_for('About') }}" class="nav-links">About</a>
+               </li>
+
+          </ul>
+     </nav>
+     <br>
 
 
-{% endblock content %}
+
+
+
+</body>
+
+</html>
