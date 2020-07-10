@@ -1,0 +1,46 @@
+{% extends "layout.html" %}{% block content %}
+<h1 class="myheading">Test Your Model</h1>
+<div>
+
+    <div class="row">
+        <div class="column flex-container">
+            <br></br>
+            <div>
+                <video autoplay playsinline muted id="webcam" class="cam"></video>
+
+                <div class="grey-bg">
+                    <div class="row text-center">
+                        <h3>Prediction: <span>How are you ?</span></h3>
+                        <h3>Probability : <span>50%</span></h3>
+                    </div>
+                </div>
+
+                <button class="dark btn-lg btn-shadow">Next step <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="column flex-2-container">
+
+
+
+            <div>
+                <h3 class="texttospeech text-center">TEXT TO SPEECH</h3>
+                <textarea placeholder="Enter text Here" rows="20" cols="40"></textarea>
+                <br></br> <button class="dark    convert ">CONVERT</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
+</script>
+{% endblock content %}

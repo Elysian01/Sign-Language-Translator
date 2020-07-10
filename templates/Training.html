@@ -1,0 +1,74 @@
+{% extends "layout.html" %}{% block content %}
+
+
+<div class="alert alert-success">
+    Please train atleast 30 images for each class and,for more information
+    <a href="#" style="color: green;">click
+        here </a>
+</div>
+
+
+<h1 class="myheading"><i class="fab fa-joomla"></i> Train Your Own Model</h1><br>
+
+<div class="row">
+    <div class="column flex-container">
+        <br></br>
+        <div class="mycam">
+            <video autoplay playsinline muted id="webcam" class="cam"></video>
+
+            <div class="grey-bg">
+                <div class="row text-center">
+                    <h3>Prediction: <span id="predictions"></span></h3>
+                    <h3>Probability : <span id="confidence"></span> %</h3>
+                </div>
+            </div>
+
+            <button class="dark btn-lg btn-shadow">Next step <i class="fas fa-arrow-right"></i></button><br><br>
+        </div>
+        <!-- <Webcam class="mycam"></Webcam> -->
+    </div>
+
+
+    <div class="column flex-2-container">
+        <!-- <AddContainer></AddContainer> -->
+        <div>
+
+            <div class="add-class text-center">
+                <input id="inputClassName" type="text" placeholder="Enter Class Name Here" name="option" />
+                <button class="dark btn-lg btn-shadow mr-5" id="add-button">Add <i
+                        class="fas fa-plus fa-1x"></i></button>
+            </div>
+            <br>
+
+
+            <div id="training-cards">
+
+                <!-- <div class="grey-bg">
+                        <div class="text-center">
+                            <h3>Class Name : <span>How are you?</span></h3>
+                            <h3>Images : <span>50</span></h3>
+                        </div>
+                        <div>
+                            <button class="dark btn-spread btn-shadow mr-5">Add New Images <i
+                                    class="fas fa-plus fa-1x"></i>
+                            </button>
+                        </div>
+                    </div> -->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
+</script>
+{% endblock content %}
