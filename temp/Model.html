@@ -1,0 +1,108 @@
+{% extends "layout.html" %}{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
+    <!-- ml5 -->
+    <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js"></script>
+    <script src="sketch.js"></script>
+<h1 class="myheading">Test Your Model</h1>
+<div>
+
+    <div class="row">
+        <div class="column flex-container">
+            <br></br>
+            <div>
+                <video autoplay playsinline muted id="webcam"></video>
+
+                <div class="grey-bg">
+                    <div class="row text-center">
+                        <h3>Prediction: <span id="result">How are you ?</span></h3>
+                        <h3>Probability : <span id = "confidence">50%</span></h3>
+                    </div>
+                </div>
+
+                <button id="buttonPredict" class=" dark btn-lg btn-shadow">Next step <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="column flex-2-container">
+
+
+
+            <div>
+                <h3 class="texttospeech text-center">TEXT TO SPEECH</h3>
+                <textarea placeholder="Enter text Here" rows="20" cols="40"></textarea>
+                <br></br> <button class="dark    convert ">CONVERT</button>
+            </div>
+        </div>
+    </div>
+</div>
+<body>
+    
+    <h1 class="myheading">Test Your Model</h1>
+    <div id="videoContainer" style="margin-left: 900px; margin-top: 200px;"></div>
+    <div class="bnt" style="visibility:hidden";>
+    <p><span id="modelStatus">Loading MobileNet</span></p>
+    
+    <p>
+      <button id="A"></button>
+      <span id="A"></span><br />
+      <button id="B">Add B</button>
+      <span id="B">0</span> B<br />
+      <button id="C">Add C</button>
+      <span id="C">0</span> C<br/>
+      <button id="D">Add D</button>
+      <span id="D">0</span> D<br />
+      <button id="E">Add E</button>
+      <span id="E">0</span> E<br />
+      <button id="F">Add F</button>
+      <span id="F">0</span> F<br/>
+      <button id="G">Add G</button>
+      <span id="G">0</span> G<br />
+      <button id="H">H</button>
+      <span id="H">0</span>H<br />
+      
+      <button id="L">Add L</button>
+      <span id="L">0</span> L<br />
+      <button id="O">Add O</button>
+      <span id="O">0</span> O<br />
+      <button id="P">Add P</button>
+      <span id="P">0</span> P<br/>
+       <button id="V">Add V</button>
+      <span id="V">0</span> V<br />
+      
+       <button id="W">Add W</button>
+      <span id="W">0</span> W<br />
+      
+      <button id="Y">Add Y</button>
+      <span id="Y">0</span> Y<br />
+       <button id="Ok">Add Ok</button>
+      <span id="Ok">0</span> Ok<br />
+      
+      <button id="Bad">Add Bad</button>
+      <span id="Bad">0</span> Bad<br />
+      <button id="I_love_you">Add I love You</button>
+      <span id="I_love_you">0</span> I love you<br />
+       <button id="Good">Add Good</button>
+      <span id="Good">0</span> Good<br />
+      
+      <button id="Hello">Add Hello</button>
+      <span id="Hello">0</span> Hello<br />
+      <button id="That">Add That</button>
+      <span id="That">0</span> That<br />
+      
+      <br/>
+      <button id="train">Train</button><span id="loss"></span>
+    </div>
+
+
+<script>
+
+
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
+</script>
+{% endblock content %}
