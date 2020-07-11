@@ -630,7 +630,14 @@ background-color: #2ab7ca;
     .in-column{
       margin-left: 30%;
     }
+    .modelpic{
+      width:1000px;
+    }
     @media screen and  (max-width: 600px) {
+      .modelpic{
+        width:250px;
+      }
+
 .outer-column{
   display: grid;
   /* justify-content: center; */
