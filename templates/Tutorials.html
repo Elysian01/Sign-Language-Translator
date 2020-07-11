@@ -7,7 +7,8 @@
      <title>Sign Language Translator</title>
 
      <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+     <link rel="stylesheet" type="text/css" href="../static/style.css">
+     <script src="./js/tutorial.js"></script>
 
 </head>
 
@@ -16,21 +17,21 @@
           <span class="navbar-toggle" id="js-navbar-toggle">
                <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
           </span>
-          <h5><a href="{{ url_for('Tutorial')}}" class="logo">Sign Language <span>Translator</span></a></h5>
+          <h5><a href="./Tutorials.html" class="logo">Sign Language <span>Translator</span></a></h5>
           <ul class="main-nav" id="js-menu">
                <li>
-                    <a href="{{ url_for('Tutorial')}}" class="nav-links">Tutorials</a>
+                    <a href="./Tutorials.html" class="nav-links">Tutorials</a>
                </li>
                <li>
-                    <a href="{{ url_for('Training')}}" class="nav-links">Training</a>
-               </li>
-
-               <li>
-                    <a href="{{ url_for('Model')}}" class="nav-links">Model & Voice</a>
+                    <a href="./Training.html" class="nav-links">Training</a>
                </li>
 
                <li>
-                    <a href="{{ url_for('About') }}" class="nav-links">About</a>
+                    <a href="./Model.html" class="nav-links">Model & Voice</a>
+               </li>
+
+               <li>
+                    <a href="./About.html" class="nav-links">About</a>
                </li>
 
           </ul>
@@ -45,8 +46,7 @@
           <br><br><br><br>
      </div>
      <div class="tut-container">
-          <div class="item1" id = "image-loader">
-
+          <div class="item1" id="image-loader">
                <img src="../static/ISL_Gifs/29-hello.gif" class="tutorial-image">
           </div>
           <div class="grey-bgs ml-5">
@@ -59,10 +59,8 @@
                     <div class="column">
                          <ul>
                               <li><button id="47" value="47" type="button">Lets go for lunch </button></li>
-                              <li ><button id="79" value="79" type="button">What is today's date</button></li>
-                              <li ><button id="20" value="20" type="button">Do you have  money</button></li>
-
-
+                              <li><button id="79" value="79" type="button">What is today's date</button></li>
+                              <li><button id="20" value="20" type="button">Do you have money</button></li>
 
                               <li><button id="53" value="53" type="button">Nice to Meet you</button></li>
                               <li><button id="81" value="81" type="button">What is your name</button></li>
@@ -75,11 +73,13 @@
                          </ul>
                     </div>
                     <div class="column">
-                         <ul>  <li class="in-column"><button id="29" value="29" type="button">Hello </button></li>
+                         <ul>
+                              <li class="in-column"><button id="29" value="29" type="button">Hello </button></li>
                               <li class="in-column"><button id="33" value="33" type="button">I am fine </button></li>
-                              <li class="in-column" ><button id="34" value="34" type="button">I am Sorry </button></li>
+                              <li class="in-column"><button id="34" value="34" type="button">I am Sorry </button></li>
 
-                              <li class="in-column"><button id="54" value="54" type="button">Open the door </button> </li>
+                              <li class="in-column"><button id="54" value="54" type="button">Open the door </button>
+                              </li>
 
                               <li class="in-column"><button id="5" value="5" type="button">Are you Hungry </button></li>
                               <li class="in-column"><button id="11" value="11" type="button">Be Careful</button></li>
@@ -93,7 +93,7 @@
           </div>
 
      </div>
-     <script src="{{ url_for('static',filename='js/train.js')}}"></script>
+
 </body>
 
 </html>

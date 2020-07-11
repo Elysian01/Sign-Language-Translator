@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Language Translator</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+
     <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
 
 </head>
 
@@ -15,21 +16,21 @@
         <span class="navbar-toggle" id="js-navbar-toggle">
             <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
         </span>
-        <h5><a href="{{ url_for('Tutorial')}}" class="logo">Sign Language <span>Translator</span></a></h5>
+        <h5><a href="./Tutorials.html" class="logo">Sign Language <span>Translator</span></a></h5>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="{{ url_for('Tutorial')}}" class="nav-links">Tutorials</a>
+                <a href="./Tutorials.html" class="nav-links">Tutorials</a>
             </li>
             <li>
-                <a href="{{ url_for('Training')}}" class="nav-links">Training</a>
-            </li>
-
-            <li>
-                <a href="{{ url_for('Model')}}" class="nav-links">Model & Voice</a>
+                <a href="./Training.html" class="nav-links">Training</a>
             </li>
 
             <li>
-                <a href="{{ url_for('About') }}" class="nav-links">About</a>
+                <a href="./Model.html" class="nav-links">Model & Voice</a>
+            </li>
+
+            <li>
+                <a href="./About.html" class="nav-links">About</a>
             </li>
 
         </ul>
@@ -119,8 +120,9 @@
     </div>
     <br> <br> <br>
     <div class="githubdiv">
-        <a href="#"> <button class="bton  dark mr-5" style="color:ff9900"> <span style="color:#fafafa"><i
-                        class="fab fa-github " style="margin-right:1rem"></i>Open Source Project on Github </span>
+        <a href="https://github.com/Elysian01/Sign-Language-Translator"> <button class="bton  dark mr-5"
+                style="color:ff9900"> <span style="color:#fafafa"><i class="fab fa-github "
+                        style="margin-right:1rem"></i>Open Source Project on Github </span>
             </button></a>
     </div>
     </div>
