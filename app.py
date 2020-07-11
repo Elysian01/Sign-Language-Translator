@@ -17,7 +17,7 @@ def Tutorial():
 
 @app.route("/model")
 def Model():
-    return render_template("Model.html")
+    return render_template("Model/Model.html")
 
 
 @app.route("/about")
@@ -25,9 +25,9 @@ def About():
     return render_template("About.html")
 
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template("PageNotFound.html")
+# @app.errorhandler(404)
+# def page_not_found(e):
+#     return render_template("PageNotFound.html")
 
 
 if __name__ == '__main__':
