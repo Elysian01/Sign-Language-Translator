@@ -1,19 +1,18 @@
 from flask import Flask, render_template, request, url_for, send_file, flash, redirect, make_response
 
-
 app = Flask(__name__)
 
 
-@app.route("/")
 @app.route("/home")
 def Training():
     # cases, cured, death = CurrentStats.currentStatus()
-    return render_template("Training.html" )
+    return render_template("Training.html")
 
 
+@app.route("/")
 @app.route("/tutorial")
 def Tutorial():
-    return render_template("Tutorials.html" )
+    return render_template("Tutorials.html")
 
 
 @app.route("/model")
@@ -23,7 +22,7 @@ def Model():
 
 @app.route("/about")
 def About():
-    return render_template("About.html" )
+    return render_template("About.html")
 
 
 @app.errorhandler(404)
