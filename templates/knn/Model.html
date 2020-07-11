@@ -1,0 +1,256 @@
+<html>
+  <head>
+    <title>Getting Started with ml5.js</title>
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
+    <!-- ml5 -->
+    <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <style>
+    *{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color:#222222;
+    padding: 10px 40px 10px 70px;
+  }
+  .act{
+    float: left;
+  }
+  
+  .topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+   
+    color: #ff9900;
+  }
+  span{
+    color: #ff9900
+  }
+  
+  
+  
+  .topnav .icon {
+    display: none;
+  }
+  #videoContainer{
+      margin-left:900px;
+      
+    }
+    
+    .pred{
+      position: relative;
+      top:700px;
+      left:100px;
+    }
+    
+
+
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .span{
+      color: #ff9900
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .span{
+      color: #ff9900;
+    }
+    .topnav{
+      padding: 1px;
+      
+    }
+    .act{
+      margin-right: 70px;
+    }
+  
+  
+  }
+  @media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .span{
+      color: #ff9900
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .span{
+      color: #ff9900;
+    }
+    .topnav{
+      padding: 1px;
+      
+    }
+    .act{
+      margin-right: 105px;
+    }
+    #videoContainer{
+      margin-left: 100px;
+    }
+    
+    
+  
+  }
+  </style>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <div class="act">
+      <a href="#home">Sign<span> Language</span> Translator</a>
+    </div>
+      <a href="#news">Home</a>
+      <a href="#contact">About</a>
+      <a href="#about">Services</a>
+      <a href="#about">Contact</a>
+    
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <div class="body" style="width: 1000px; position: relative; bottom: 100px;">
+    <div class="container border p-2 w-1 pred shadow-lg p-3 mb-5 bg-white rounded" style="width: 400px;">
+      <button  id="buttonPredict" class="btn btn-dark" data-toggle="button" style="color: #ff9900;">Start guessing!</button><br />
+      
+    </p>
+    
+    <p style="font-weight: bold;">Label: <span  style="font-weight: bold;" id="result">
+    </span><br />confidence: <span id="confidence"></span></p>
+    
+    </div>
+ 
+    
+    
+    <script> 
+       function fill1(){
+              if(document.getElementById('result').value != 0){
+                document.getElementById('resul').value=document.getElementById('result').value;
+              }
+  }
+  </script> 
+      
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <h1 style="margin-left: 550px;";><i class="fa fas menu"></i>Translation Tool</h1>
+    <div id="videoContainer"></div>
+    </div>
+    <div class="hide" style="display: none;">
+    <p><span id="modelStatus">Loading MobileNet</span></p>
+    <p>
+      <button id="A">Add A</button>
+      <span id="A">0</span> A<br />
+      <button id="B">Add B</button>
+      <span id="B">0</span> B<br />
+      <button id="C">Add C</button>
+      <span id="C">0</span> C<br/>
+      <button id="D">Add D</button>
+      <span id="D">0</span> D<br />
+      <button id="E">Add E</button>
+      <span id="E">0</span> E<br />
+      <button id="F">Add F</button>
+      <span id="F">0</span> F<br/>
+      <button id="G">Add G</button>
+      <span id="G">0</span> G<br />
+      <button id="H">H</button>
+      <span id="H">0</span>H<br />
+      
+      <button id="L">Add L</button>
+      <span id="L">0</span> L<br />
+      <button id="O">Add O</button>
+      <span id="O">0</span> O<br />
+      <button id="P">Add P</button>
+      <span id="P">0</span> P<br/>
+       <button id="V">Add V</button>
+      <span id="V">0</span> V<br />
+      
+       <button id="W">Add W</button>
+      <span id="W">0</span> W<br />
+      
+      <button id="Y">Add Y</button>
+      <span id="Y">0</span> Y<br />
+       <button id="Ok">Add Ok</button>
+      <span id="Ok">0</span> Ok<br />
+      
+      <button id="Bad">Add Bad</button>
+      <span id="Bad">0</span> Bad<br />
+      <button id="I_love_you">Add I love You</button>
+      <span id="I_love_you">0</span> I love you<br />
+       <button id="Good">Add Good</button>
+      <span id="Good">0</span> Good<br />
+      
+      <button id="Hello">Add Hello</button>
+      <span id="Hello">0</span> Hello<br />
+      <button id="That">Add That</button>
+      <span id="That">0</span> That<br />
+      
+      <br/>
+      <button id="train">Train</button><span id="loss"></span>
+      </div>
+      
+    <p style="visibility: hidden;">
+      <button id="save">Save Model</button> 
+      <label for="avatar">Load Model:</label>
+      <input type="file" id="load" multiple           />
+    </p>
+    <script src="sketch.js"></script>
+  </body>
+</html>
