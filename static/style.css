@@ -82,6 +82,9 @@ body {
 }
 span{
   color:#ff9900;
+  padding:0;
+  padding: 0px !important;
+  text-align: center;
 }
 
 .navbar {
@@ -369,13 +372,37 @@ background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
   font-size: 25px;
   text-align: center;
 }
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and  (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
- 
-  .cam{
+.allbuttons{
+  display:grid;
+  background-color: #0096fe;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  /* grid-template-rows: 100px 100px ; */
+}
+
+.allbuttons-1{
+  display: grid;
+  grid-template-columns:auto auto auto auto auto auto  ;
+}  
+.allbuttons-4{
+  display: grid;
+  grid-template-columns:auto auto auto auto auto auto  ;
+
+}
+
+.allbuttons-5{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+.allbuttons-2{
+  display: grid;
+  grid-template-columns:auto auto auto auto auto auto ;
+}  
+.allbuttons-3{
+  display: grid;
+  grid-template-columns:auto auto auto auto auto auto ;
+}  
+.cam{
     width:295px;
     margin-left:6%;
     border-radius:5%;
@@ -416,7 +443,7 @@ background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
     box-shadow: 8px 6px #ccc;
     margin-top: 10%;
   }
-}
+
 
 
 
@@ -604,6 +631,14 @@ background-color: #2ab7ca;
       margin-left: 30%;
     }
     @media screen and  (max-width: 600px) {
+.outer-column{
+  display: grid;
+  /* justify-content: center; */
+  grid-template-columns: auto   ;
+
+
+}
+
       .in-column{
         margin-left: 0%;
       }
@@ -642,6 +677,10 @@ background-color: #2ab7ca;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
   }
+
+
+
+  
   *{
       margin:0;
       padding:0;
@@ -655,11 +694,39 @@ background-color: #2ab7ca;
   color:white;
     border-bottom: 1px solid rgba(0,0,0,.125);
   }
+  .mycard-header {
+    padding: .75rem 1.25rem;
+
+    margin-bottom: 0;
+    /* background-color: rgba(0,0,0,.03); */
+    background-color: #394043;
+  color:white;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+  }
+
+
+
+
+
+
+
   .card-body {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
   }
+
+.mycard-body{
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0rem;
+}
+
+
+
+
+
+
   .card-title{
     margin-bottom: .75rem;
   }
@@ -736,10 +803,130 @@ background-color: #2ab7ca;
   display: flex;
   flex-direction: column;
 }
+.alphabets{
+  margin-left:5px;
+  margin-right:5px;
+  font-size:40px;
+}
+
+.allbuttons{
+display: flex;
+flex-wrap: wrap;
+}
 .tutorial-image{
   width: 600px;height: 350px;
 }
+.alpha-containers{
+  display:grid;
+  justify-content: space-evenly;
+  grid-template-columns: 500px 850px;
+  
+}
+.alphabetcard{
+  width: 500px !important;
+  margin-left:23%;
+  margin-right:15%;
+  justify-content: center;
+  /* box-shadow: 3px 8px #ccc; */
+/* margin-left:100px; */
+  position: relative;
+   
+  display: flex;
+  flex-direction: column;
+  min-width: 100;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  
+}
+.newcard{
+  width: 55%;
+  margin-left:40%;
+  /* margin-right:15%; */
+  /* justify-content: center; */
+  /* box-shadow: 3px 8px #ccc; */
+
+  position: relative;
+   
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+
+}
+/* .myflex{
+  display:grid;
+  grid-template-rows: auto auto auto;
+} */
+.myflexes{
+  
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0rem;
+}
 @media screen and  (max-width: 600px) {
+  .outer-column{
+    display: inline-block;
+    /* justify-content: space-evenly; */
+    width:100%;
+  
+  }  
+  .mylistbtn{
+    width:100% !important;
+  }
+
+
+  .newcard{
+    width: 90%;
+    margin-left:5%;
+    margin-right: 5%;
+    /* margin-right:15%; */
+    /* justify-content: center; */
+    /* box-shadow: 3px 8px #ccc; */
+  
+    position: relative;
+     
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+  
+  }
+
+
+  .alphabetcard{
+    width: 90% !important;
+    margin-left:5%;
+    margin-right:5%;
+    justify-content: center;
+    /* box-shadow: 3px 8px #ccc; */
+  /* margin-left:100px; */
+    position: relative;
+     
+    display: flex;
+    flex-direction: column;
+    min-width: 100;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    
+  }
+  .alpha-containers{
+    display:grid;
+    grid-template-columns: auto ;
+  }
   .tutorial-image{
     width: 300px;height: 300px;
   } 
