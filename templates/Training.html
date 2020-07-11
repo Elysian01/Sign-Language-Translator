@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../static/mystyle.css">
     <script src="./js/main.js"></script>
 
+
+
 </head>
 
 <body>
@@ -57,6 +59,10 @@
         <div class="column flex-container">
             <br></br>
             <div class="mycam">
+                <br><br>                <br><br>
+                <br><br>                <br><br>
+
+
                 <video autoplay playsinline muted id="webcam" class="cam"></video>
 
                 <div class="grey-bg">
@@ -66,7 +72,8 @@
                     </div>
 
                 </div>
-                <button class="dark btn-lg btn-shadow" style="float: right;" id="speak">Speak <i
+     <label class="dark btn-lg mr-5" >Select Voice</label>        <select id='voiceList' style="margin:20px;" class="dark " ></select>    <br><br>
+                <button id='btnSpeak' class="dark btn-lg btn-shadow" style="float: right;" id="speak">Speak <i
                         class="fas fa-microphone ml"></i></button>
 
                 <br><br> <br><br>
@@ -81,9 +88,13 @@
             <div>
 
                 <div class="add-class text-center">
+                    <br>                    <br>
+                    <br>                    <br>
+                    <br>                    <br>
+
                     <input id="inputClassName" type="text" placeholder="Enter Class Name Here" name="option" />
                     <button class="dark btn-lg btn-shadow mr-5" id="add-button">Add <i
-                            class="fas fa-plus fa-1x"></i></button>
+                            class="fas  fa-plus fa-1x"></i></button>
                 </div>
                 <br>
 
@@ -117,7 +128,10 @@
         navBarToggle.addEventListener('click', function () {
             mainNav.classList.toggle('active');
         });
+
+  
     </script>
+
 
 
     <body>

@@ -1,6 +1,7 @@
 var identity = 0;
 var classes = []; // list of classes
 // classes = [ {id:1 , name : "Hello" , count : 0}]
+var text = ""
 
 console.log("Training Page");
 
@@ -49,8 +50,11 @@ const start = async () => {
      const initializeElements = () => {
           const inputClassName = document.getElementById("inputClassName").value
           document.getElementById('add-button').addEventListener('click', () => addClass(inputClassName));
+          // document.getElementById('btnSpeak').addEventListener('click', () => speak());
 
      };
+
+ 
 
      const addDatasetClass = async (classId) => {
 
@@ -89,7 +93,9 @@ const start = async () => {
                     // Get the most likely class and confidences from the classifier module.
                     const result = await knnClassifierModel.predictClass(activation);
 
-                    console.log(classes[result.label - 1].name)
+                    //console.log(classes[result.label - 1].name)
+                    text = classes[result.label - 1].name
+                    console.log(text)
                     predictions.innerHTML = classes[result.label - 1].name
                     console.log(result.confidences[result.label])
 
@@ -101,6 +107,43 @@ const start = async () => {
                await tf.nextFrame();
           }
      };
+
+          
+          var voiceList = document.querySelector('#voiceList');
+          var btnSpeak = document.querySelector('#btnSpeak');
+          var synth = window.speechSynthesis;
+          var voices = [];
+  
+          PopulateVoices();
+          if (speechSynthesis !== undefined) {
+              speechSynthesis.onvoiceschanged = PopulateVoices;
+          }
+  
+          btnSpeak.addEventListener('click', () => {
+              var toSpeak = new SpeechSynthesisUtterance(text);
+              var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+              voices.forEach((voice) => {
+                  if (voice.name === selectedVoiceName) {
+                      toSpeak.voice = voice;
+                  }
+              });
+              synth.speak(toSpeak);
+          });
+  
+          function PopulateVoices() {
+              voices = synth.getVoices();
+              var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+              voiceList.innerHTML = '';
+              voices.forEach((voice) => {
+                  var listItem = document.createElement('option');
+                  listItem.textContent = voice.name;
+                  listItem.setAttribute('data-lang', voice.lang);
+                  listItem.setAttribute('data-name', voice.name);
+                  voiceList.appendChild(listItem);
+              });
+  
+              voiceList.selectedIndex = selectedIndex;
+          }
 
      await initializeElements();
      await imageClassificationWithTransferLearningOnWebcam();
