@@ -2,6 +2,8 @@ var identity = 0;
 var classes = []; // list of classes
 // classes = [ {id:1 , name : "Hello" , count : 0}]
 
+console.log("Training Page");
+
 const start = async () => {
      const trainingCards = document.getElementById("training-cards")
      const predictions = document.getElementById("predictions")
@@ -92,11 +94,6 @@ const start = async () => {
                     console.log(result.confidences[result.label])
 
                     confidence.innerHTML = Math.floor(result.confidences[result.label] * 100)
-
-                    // const classes = ['A', 'B', 'C'];
-                    // document.getElementById('console').innerText = `
-                    // prediction: ${classes[result.label]}\n
-                    // probability: ${result.confidences[result.label]}`;
 
                     // Dispose the tensor to release the memory.
                     img.dispose();
