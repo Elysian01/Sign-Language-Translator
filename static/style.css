@@ -638,13 +638,6 @@ background-color: #2ab7ca;
         width:250px;
       }
 
-.outer-column{
-  display: grid;
-  /* justify-content: center; */
-  grid-template-columns: auto   ;
-
-
-}
 
       .in-column{
         margin-left: 0%;
@@ -700,6 +693,8 @@ background-color: #2ab7ca;
     background-color: #394043;
   color:white;
     border-bottom: 1px solid rgba(0,0,0,.125);
+    /* box-shadow: 3px 0px #ccc; */
+    /* border-radius: 5%; */
   }
   .mycard-header {
     padding: .75rem 1.25rem;
@@ -760,12 +755,12 @@ background-color: #2ab7ca;
   grid-template-columns: auto auto  ;
 
 }
-.outer-column{
+/* .outer-column{
   display: flex;
   justify-content: space-evenly;
 
 
-}
+} */
 
 .signimage{
   width:260px;
@@ -795,7 +790,7 @@ background-color: #2ab7ca;
 }
 .grey-bgs{
   /* padding: 5px 10px; */
-  padding:10px;
+  padding:0px;
   border-radius: 10px;
   background-color: #fafafa;
   border: 0;
@@ -821,12 +816,19 @@ display: flex;
 flex-wrap: wrap;
 }
 .tutorial-image{
+  /* width: 600px;height: 350px; */
   width: 600px;height: 350px;
+
+  /* box-shadow: 3px 8px #ccc; */
+border-style: solid;
+  border-radius: 5%;
+
 }
 .alpha-containers{
   display:grid;
   justify-content: space-evenly;
   grid-template-columns: 500px 850px;
+
   
 }
 .alphabetcard{
@@ -837,7 +839,8 @@ flex-wrap: wrap;
   /* box-shadow: 3px 8px #ccc; */
 /* margin-left:100px; */
   position: relative;
-   
+     /* box-shadow: 3px 8px #ccc;
+border-radius: 5%; */
   display: flex;
   flex-direction: column;
   min-width: 100;
@@ -878,10 +881,20 @@ flex-wrap: wrap;
   padding: 0rem;
 }
 @media screen and  (max-width: 600px) {
+  .mycard-header {
+    padding: .75rem 1.25rem;
+/* margin-top:100px; */
+    margin-bottom: 0;
+    /* background-color: rgba(0,0,0,.03); */
+    background-color: #394043;
+  color:white;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+  }
   .outer-column{
     display: inline-block;
     /* justify-content: space-evenly; */
     width:100%;
+    text-align: center;
   
   }  
   .mylistbtn{
@@ -892,6 +905,7 @@ flex-wrap: wrap;
   .newcard{
     width: 90%;
     margin-left:5%;
+    margin-top: 100px;
     margin-right: 5%;
     /* margin-right:15%; */
     /* justify-content: center; */
@@ -935,7 +949,9 @@ flex-wrap: wrap;
     grid-template-columns: auto ;
   }
   .tutorial-image{
-    width: 300px;height: 300px;
+    width: 90%;height: 300px;
+    margin-left: 5%;
+    margin-right: 5%;
   } 
 .tut-container{
   display: grid;
@@ -952,21 +968,21 @@ flex-wrap: wrap;
   margin-left:20%;
   margin-right:20%;
 }
-.outer-column{
-  display: grid;
-  justify-content: center;
-  grid-template-columns: auto   ;
-
-
+*{
+  overflow-x: hidden
 }
+
 .grey-bgs{
   /* padding: 5px 10px; */
-  padding:10px;
+  padding:0px;
+  width:90%;
   border-radius: 10px;
   background-color: #fafafa;
   border: 0;
   /* margin: 2rem 10px; */
+  margin-top: 100px;
 margin-left:5%;
+margin-right:5%;
   font-size: 20px;
   box-shadow: 3px 8px #ccc;
   outline: none;
