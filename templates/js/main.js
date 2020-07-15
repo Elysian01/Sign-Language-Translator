@@ -51,10 +51,54 @@ const start = async () => {
           const inputClassName = document.getElementById("inputClassName").value
           document.getElementById('add-button').addEventListener('click', () => addClass(inputClassName));
           // document.getElementById('btnSpeak').addEventListener('click', () => speak());
+          document.getElementById('load_button').addEventListener('change', (event) => uploadModel(knnClassifierModel, event));
+          document.getElementById('save_button').addEventListener('click', async () => downloadModel(knnClassifierModel));
+
 
      };
 
- 
+     const saveClassifier = (classifierModel) => {
+          let datasets = knnClassifierModel.getClassifierDataset();
+          let datasetObject = {};
+          Object.keys(datasets).forEach((key) => {
+               let data = datasets[key].dataSync();
+               datasetObject[key] = Array.from(data);
+          });
+          let jsonModel = JSON.stringify(datasetObject);
+          console.log(jsonModel)
+          let downloader = document.createElement('a');
+          downloader.download = "model.json";
+          downloader.href = 'data:text/text;charset=utf-8,' + encodeURIComponent(jsonModel);
+          document.body.appendChild(downloader);
+          downloader.click();
+          downloader.remove();
+     };
+
+     const uploadModel = async (classifierModel, event) => {
+          let inputModel = event.target.files;
+          console.log("Uploading");
+          let fr = new FileReader();
+          if (inputModel.length > 0) {
+               fr.onload = async () => {
+                    var dataset = fr.result;
+                    var tensorObj = JSON.parse(dataset);
+
+                    Object.keys(tensorObj).forEach((key) => {
+                         tensorObj[key] = tf.tensor(tensorObj[key], [tensorObj[key].length / 1024, 1024]);
+                    });
+                    classifierModel.setClassifierDataset(tensorObj);
+                    console.log("Classifier has been set up! Congrats! ");
+               };
+          }
+          await fr.readAsText(inputModel[0]);
+          console.log("Uploaded");
+     };
+
+     const downloadModel = async (classifierModel) => {
+          saveClassifier(classifierModel);
+     };
+
+
 
      const addDatasetClass = async (classId) => {
 
@@ -108,42 +152,42 @@ const start = async () => {
           }
      };
 
-          
-          var voiceList = document.querySelector('#voiceList');
-          var btnSpeak = document.querySelector('#btnSpeak');
-          var synth = window.speechSynthesis;
-          var voices = [];
-  
-          PopulateVoices();
-          if (speechSynthesis !== undefined) {
-              speechSynthesis.onvoiceschanged = PopulateVoices;
-          }
-  
-          btnSpeak.addEventListener('click', () => {
-              var toSpeak = new SpeechSynthesisUtterance(text);
-              var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
-              voices.forEach((voice) => {
-                  if (voice.name === selectedVoiceName) {
-                      toSpeak.voice = voice;
-                  }
-              });
-              synth.speak(toSpeak);
+
+     var voiceList = document.querySelector('#voiceList');
+     var btnSpeak = document.querySelector('#btnSpeak');
+     var synth = window.speechSynthesis;
+     var voices = [];
+
+     PopulateVoices();
+     if (speechSynthesis !== undefined) {
+          speechSynthesis.onvoiceschanged = PopulateVoices;
+     }
+
+     btnSpeak.addEventListener('click', () => {
+          var toSpeak = new SpeechSynthesisUtterance(text);
+          var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+          voices.forEach((voice) => {
+               if (voice.name === selectedVoiceName) {
+                    toSpeak.voice = voice;
+               }
           });
-  
-          function PopulateVoices() {
-              voices = synth.getVoices();
-              var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
-              voiceList.innerHTML = '';
-              voices.forEach((voice) => {
-                  var listItem = document.createElement('option');
-                  listItem.textContent = voice.name;
-                  listItem.setAttribute('data-lang', voice.lang);
-                  listItem.setAttribute('data-name', voice.name);
-                  voiceList.appendChild(listItem);
-              });
-  
-              voiceList.selectedIndex = selectedIndex;
-          }
+          synth.speak(toSpeak);
+     });
+
+     function PopulateVoices() {
+          voices = synth.getVoices();
+          var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+          voiceList.innerHTML = '';
+          voices.forEach((voice) => {
+               var listItem = document.createElement('option');
+               listItem.textContent = voice.name;
+               listItem.setAttribute('data-lang', voice.lang);
+               listItem.setAttribute('data-name', voice.name);
+               voiceList.appendChild(listItem);
+          });
+
+          voiceList.selectedIndex = selectedIndex;
+     }
 
      await initializeElements();
      await imageClassificationWithTransferLearningOnWebcam();
