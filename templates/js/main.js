@@ -64,7 +64,7 @@ const start = async () => {
      };
 
      const saveClassifier = (classifierModel) => {
-          let datasets = knnClassifierModel.getClassifierDataset();
+          let datasets = classifierModel.getClassifierDataset();
           let datasetObject = {};
           Object.keys(datasets).forEach((key) => {
                let data = datasets[key].dataSync();
@@ -144,12 +144,15 @@ const start = async () => {
                     const result = await knnClassifierModel.predictClass(activation);
 
                     //console.log(classes[result.label - 1].name)
-                    text = classes[result.label - 1].name
-                    console.log(text)
-                    predictions.innerHTML = classes[result.label - 1].name
-                    console.log(result.confidences[result.label])
+                    try {
+                         predictions.innerHTML = classes[result.label - 1].name
+                         confidence.innerHTML = Math.floor(result.confidences[result.label] * 100)
+                    }
+                    catch (err) {
+                         predictions.innerHTML = result.label - 1
+                         confidence.innerHTML = Math.floor(result.confidences[result.label] * 100)
+                    }
 
-                    confidence.innerHTML = Math.floor(result.confidences[result.label] * 100)
 
                     // Dispose the tensor to release the memory.
                     img.dispose();
