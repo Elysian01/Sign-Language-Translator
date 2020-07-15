@@ -51,7 +51,7 @@ const start = async () => {
           const imageLoader = document.getElementById("image-loader")
           for (filename of letter_file) {
                if (filename === file) {
-                    var path = "../static/letters/" + filename;
+                    var path = "static/letters/" + filename;
                     imageLoader.innerHTML = '<img src=' + path + ' class="tutorial-image">'
                     break
                }
