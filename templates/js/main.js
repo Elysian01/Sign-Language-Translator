@@ -27,6 +27,12 @@ const start = async () => {
      const mobilenetModel = await createMobileNetModel();
      const knnClassifierModel = await createKNNClassifier();
      const webcamInput = await createWebcamInput();
+     var preloader = document.getElementById("loading");
+
+     function preLoader() {
+          preloader.style.display = 'none';
+     };
+     preLoader()
 
      const addClass = () => {
           // const inputClassName = document.getElementById("inputClassName").value
