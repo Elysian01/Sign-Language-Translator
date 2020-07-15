@@ -79,6 +79,7 @@ textarea:focus::placeholder {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 span{
   color:#ff9900;
@@ -175,12 +176,19 @@ span{
 }
 
   .column {
-  float: left;
-  width: 50%;
+  float: none;
+  width: 100%;
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
 
+.columns{
+  float: none;
+  width: 100%;
+  padding: 10px;
+  overflow-y: hidden;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -633,9 +641,53 @@ background-color: #2ab7ca;
     .modelpic{
       width:1000px;
     }
+   
     @media screen and  (max-width: 600px) {
+     
+      /* .column { */
+        /* margin:px; */
+        /* padding:0px; */
+        /* float:none;
+        width:100%;
+        margin-left: 25%;
+        margin-right: 25%;
+      } */
+      .grey-bgs li {
+        list-style: none;
+        width:100%;
+      
+      }
+      .outer-column{
+        display: flex;
+        justify-content: space-evenly;
+        width:100%;
+        margin-left: 0px;
+        text-align: center;
+        white-space: nowrap;
+      
+      }  
+      .column {
+      
+        float:none;
+        width:auto;
+        /* background-color:white; */
+        margin-left: 0%;
+        margin-right: 15%;
+      }
+      .columns{
+      
+        float:none;
+        width:auto;
+        /* background-color:white; */
+        /* margin-left: 0%; */
+        /* margin-right: 15%; */
+      }
+      .invisible{
+        display: none;
+      }
       .modelpic{
-        width:250px;
+        width:210px;
+        margin-right: 20px;
       }
 
 
@@ -774,8 +826,8 @@ background-color: #2ab7ca;
 .column {
   /* margin:px; */
   padding:0px;
-  /* float:left;
-  width:50%; */
+  float:left;
+  width:50%;
 }
 .center {
   text-align: center;
@@ -890,13 +942,7 @@ border-radius: 5%; */
   color:white;
     border-bottom: 1px solid rgba(0,0,0,.125);
   }
-  .outer-column{
-    display: inline-block;
-    /* justify-content: space-evenly; */
-    width:100%;
-    text-align: center;
-  
-  }  
+ 
   .mylistbtn{
     width:100% !important;
   }
@@ -968,8 +1014,8 @@ border-radius: 5%; */
   margin-left:20%;
   margin-right:20%;
 }
-*{
-  overflow-x: hidden
+.orange{
+  color:#ff9900
 }
 
 .grey-bgs{
@@ -994,6 +1040,9 @@ margin-right:5%;
 .column{
   height: auto;
 }
+.shifter{
+  margin-left: 50px;
+  /* background-color: #000; */
+}
 
-
-} 
+}

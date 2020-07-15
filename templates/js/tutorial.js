@@ -6,7 +6,7 @@ const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 const start = async () => {
 
-     buttons_ids = [47, 79, 20, 53, 81, 83, 56, 62, 29, 33, 34, 54, 5, 11, 3, 68];
+     buttons_ids = [47, 79, 20, 53, 81, 83, 56, 62, 29, 33, 34, 54, 5, 11, 3, 68,13,42,59,12,28,10,18,64,60,69,51,61,77,57];
      for (id of buttons_ids) {
           document.getElementById(id.toString()).addEventListener('click', (e) => load_image(e.target.value));
      };

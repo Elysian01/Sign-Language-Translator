@@ -39,7 +39,7 @@ const start = async () => {
           }
 
 
-          trainingCards.innerHTML += '<div class="grey-bg"><div class="text-center"><h3>Class Name : <span>' + Classname + '</span></h3><h3>Images : <span id = "images-' + identity + '" >0</span></h3></div ><div><button class="dark btn-spread btn-shadow mr-5" id="' + identity + '">Add New Images <i class="fas fa-plus fa-1x"></i></button></div></div>'
+          trainingCards.innerHTML += '<div class="newshifter"><div class="text-center"><h3>Class Name : <span>' + Classname + '</span></h3><h3>Images : <span id = "images-' + identity + '" >0</span></h3></div ><div><button class="dark btn-spread btn-shadow mr-5" id="' + identity + '">Add New Images <i class="fas fa-plus fa-1x"></i></button></div></div>'
 
           document.getElementById(identity.toString()).addEventListener('click', () => addDatasetClass(identity));
           inputClassName.value = ""

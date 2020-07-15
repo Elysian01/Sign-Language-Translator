@@ -19,7 +19,7 @@
         <h5><a href="./Tutorials.html" class="logo">Sign Language <span>Translator</span></a></h5>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="./Tutorials.html" class="nav-links">Tutorials</a>
+                <a href="./Tutorials.html" class="nav-links ">Tutorials</a>
             </li>
             <li>
                 <a href="./Training.html" class="nav-links">Training</a>
@@ -30,7 +30,7 @@
             </li>
 
             <li>
-                <a href="./About.html" class="nav-links">About</a>
+                <a href="./About.html" class="nav-links orange" style="color: #ff9900;">About</a>
             </li>
 
         </ul>
@@ -247,7 +247,16 @@
 
         </div>
     </footer>
+    <script>
+        let mainNav = document.getElementById('js-menu');
+        let navBarToggle = document.getElementById('js-navbar-toggle');
 
+        navBarToggle.addEventListener('click', function () {
+            mainNav.classList.toggle('active');
+        });
+
+  
+    </script>
 </body>
 
 </html>
