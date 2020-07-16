@@ -64,7 +64,7 @@ async  function modelReady() {
   select('#modelStatus').html('MobileNet Loaded!');
   // If you want to load a pre-trained model at the start
   
-  await classifier.load('model.json', function() {
+  await classifier.load('./model.json', function() {
      select('#modelStatus').html('Custom Model Loaded!');
    });
 }
