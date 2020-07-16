@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Getting Started with ml5.js</title>
+    <title>Practice Your Skills</title>
     <!-- p5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
@@ -53,18 +53,29 @@
     display: none;
   }
   #videoContainer{
-      margin-left:575px;
+      margin-left:545px;
       position: absolute;
       top:10px;
     }
     
     .pred{
       position: relative;
-      top:500px;
-      right:100px;
+      top:70px;
+      right:200px;
     }
     
-
+   .pred1{
+     position:relative;
+     left:1100px;
+     bottom:240px;
+     width: 300px;
+   }
+   .pred2{
+     position: relative;
+     top: 40px;
+     left:100px ;
+     
+   }
 
   
   @media screen and (max-width: 600px) {
@@ -209,7 +220,22 @@
     </script>
     
     <div id="videoContainer"></div>
-    </div>
+    
+    
+ 
+  
+  
+ </div>
+<div class="container1  pred1    rounded" style="width: 400px;">
+      
+  <img src="static\images\sign.jpg"  style="
+    border: 2px solid #ff9900 ;
+  "width=300px; height="400px;"></img>
+  <br>
+ 
+
+
+</div>
     <div class="hide" style="display: none;">
     <p><span id="modelStatus">Loading MobileNet</span></p>
     <p>
@@ -263,7 +289,7 @@
       <button id="train">Train</button><span id="loss"></span>
       </div>
       
-    <p style="visibility: hidden;">
+    <p style="display: none;">
       <button id="save">Save Model</button> 
       <label for="avatar">Load Model:</label>
       <input type="file" id="load" multiple           />
