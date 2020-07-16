@@ -11,8 +11,10 @@
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
     <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
-    <script src="http://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" href="../docs/logo.png">
     <link rel="stylesheet" type="text/css" href="../static/mystyle.css">
     <script src="./js/main.js"></script>
 
@@ -21,17 +23,19 @@
 </head>
 
 <body>
+    <div id="loading"></div>
+
     <nav class="navbar">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
         </span>
-        <h5><a href="./Tutorials.html" class="logo">Sign Language <span>Translator</span></a></h5>
+        <h5><a href="../index.html" class="logo">Sign Language <span>Translator</span></a></h5>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="./Tutorials.html" class="nav-links">Tutorials</a>
+                <a href="../index.html" class="nav-links">Tutorials</a>
             </li>
             <li>
-                <a href="./Training.html" class="nav-links">Training</a>
+                <a href="./Training.html" class="nav-links orange">Training</a>
             </li>
 
             <li>
@@ -55,12 +59,13 @@
 
     <h1 class="myheading"><i class="fab fa-joomla"></i> Train Your Own Model</h1><br>
 
+
     <div class="row">
         <div class="column flex-container">
             <br></br>
             <div class="mycam">
-                <br><br>                <br><br>
-                <br><br>                <br><br>
+                <br><br> <br><br>
+                <br><br> <br><br>
 
 
                 <video autoplay playsinline muted id="webcam" class="cam"></video>
@@ -72,7 +77,8 @@
                     </div>
 
                 </div>
-     <label class="dark btn-lg mr-5" >Select Voice</label>        <select id='voiceList' style="margin:20px;" class="dark " ></select>    <br><br>
+                <label class="dark btn-lg mr-5">Select Voice</label> <select id='voiceList' style="margin:20px;"
+                    class="dark "></select> <br><br>
                 <button id='btnSpeak' class="dark btn-lg btn-shadow" style="float: right;" id="speak">Speak <i
                         class="fas fa-microphone ml"></i></button>
 
@@ -86,11 +92,21 @@
         <div class="column flex-2-container">
             <!-- <AddContainer></AddContainer> -->
             <div>
+                <div class="model">
+                    <button class="dark btn-lg btn-shadow " id="save_button">Download Model <i
+                            class="fas fa-download"></i></button>
+                    <input id="load_button" class="fileinputs" type="file" accept=".json">
+                    <!-- <label for="upload-photo">Browse...</label> -->
+
+
+
+
+                </div>
 
                 <div class="add-class text-center">
-                    <br>                    <br>
-                    <br>                    <br>
-                    <br>                    <br>
+                    <br> <br>
+                    <br> <br>
+                    <br> <br>
 
                     <input id="inputClassName" type="text" placeholder="Enter Class Name Here" name="option" />
                     <button class="dark btn-lg btn-shadow mr-5" id="add-button">Add <i
@@ -101,7 +117,7 @@
 
                 <div id="training-cards">
 
-                    <!-- <div class="grey-bg">
+                    <!-- <div class=" newshifter">
                         <div class="text-center">
                             <h3>Class Name : <span>How are you?</span></h3>
                             <h3>Images : <span>50</span></h3>
@@ -129,7 +145,7 @@
             mainNav.classList.toggle('active');
         });
 
-  
+
     </script>
 
 

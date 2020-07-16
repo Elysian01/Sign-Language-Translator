@@ -6,7 +6,7 @@ const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 const start = async () => {
 
-     buttons_ids = [47, 79, 20, 53, 81, 83, 56, 62, 29, 33, 34, 54, 5, 11, 3, 68];
+     buttons_ids = [47, 79, 20, 53, 81, 83, 56, 62, 29, 33, 34, 54, 5, 11, 3, 68, 13, 42, 59, 12, 28, 10, 18, 64, 60, 69, 51, 61, 77, 57];
      for (id of buttons_ids) {
           document.getElementById(id.toString()).addEventListener('click', (e) => load_image(e.target.value));
      };
@@ -25,7 +25,7 @@ const start = async () => {
 
           for (let i = 0; i < keywords.length; i++) {
                if (keywords[i] === searchInput) {
-                    var path = "../static/ISL_Gifs/" + gifs_files[i];
+                    var path = "static/ISL_Gifs/" + gifs_files[i];
                     imageLoader.innerHTML = '<img src=' + path + ' class="tutorial-image">'
                     found = true;
                     break
@@ -41,7 +41,7 @@ const start = async () => {
 
      const load_image = async (val) => {
           const imageLoader = document.getElementById("image-loader")
-          var path = "../static/ISL_Gifs/" + gifs_files[val];
+          var path = "static/ISL_Gifs/" + gifs_files[val];
           imageLoader.innerHTML = '<img src=' + path + ' class="tutorial-image">'
      };
 
@@ -51,7 +51,7 @@ const start = async () => {
           const imageLoader = document.getElementById("image-loader")
           for (filename of letter_file) {
                if (filename === file) {
-                    var path = "../static/letters/" + filename;
+                    var path = "static/letters/" + filename;
                     imageLoader.innerHTML = '<img src=' + path + ' class="tutorial-image">'
                     break
                }
