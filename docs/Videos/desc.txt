@@ -1,0 +1,18 @@
+Link to Website :- https://elysian01.github.io/Sign-Language-Translator/
+Source Code :- https://github.com/Elysian01/Sign-Language-Translator
+
+Sign Language Translator enables the hearing impaired user to communicate efficiently in sign language, 
+and the application will translate the same into text/speech.The user has to train the model, by recording the
+sign language gestures and then label the gesture. The user can then use the saved and recorded gestures while 
+speaking to other people.
+
+It also consists tutorial's page containing 100+ most commonly used phrases , alphabets , etc and a practice page to
+practice alphabets signs against a deep learning model.  
+
+Contact Us :-  intmain1221@gmail.com
+
+Connect with us on LinkedIn:
+Abhishek Gupta (Elysian01) : - https://www.linkedin.com/in/abhishek-gupta-a745221a0/
+Abdul Azim : -  https://www.linkedin.com/in/abdul-azim-08087019b/
+Ansh Chhadva :-  https://www.linkedin.com/in/ansh-chhadva-ab3902183/
+Gladina Raymond :- https://www.linkedin.com/in/gladina-raymond-2a56a8194/
