@@ -16,12 +16,12 @@
 <h2>Train Your Own Sign Language</h2>
 <br>
 
-<img src="./docs/Videos/final.gif" alt="#" width="700px" height="350px">
+<img src="./docs/Videos/training-demo.gif" alt="#" width="700px" height="350px">
 <br><hr>
 
 <h2>Practice Your Alphabet Sign Language (ASL)</h2>
 
-<img src="./docs/Videos/final.gif" alt="#" width="700px" height="350px">
+<img src="./docs/Videos/training-demo.gif" alt="#" width="700px" height="350px">
 
 <br>
 
