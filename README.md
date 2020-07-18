@@ -25,6 +25,6 @@
 
 <br>
 
-### Built using Tensorflow.js , ML5.js and p5.js
+
 
 
