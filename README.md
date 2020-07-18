@@ -17,14 +17,14 @@
 <br>
 
 <img src="./docs/Videos/final.gif" alt="#" width="700px" height="350px">
+<br><hr>
 
 <h2>Practice Your Alphabet Sign Language (ASL)</h2>
 
 <img src="./docs/Videos/final.gif" alt="#" width="700px" height="350px">
 
-### Tech Stack
-* Tensorflow.js
-* ML5.js & p5.js
-* Javascript
-* HTML & CSS
+<br>
+
+### Built using Tensorflow.js , ML5.js and p5.js
+
 
