@@ -21,7 +21,7 @@
 
 <h2>Practice Your Alphabet Sign Language (ASL)</h2>
 
-<img src="./docs/Videos/training-demo.gif" alt="#" width="700px" height="350px">
+<img src="./docs/Videos/SLT-Practice-GIF.gif" alt="#" width="700px" height="350px">
 
 <br>
 
