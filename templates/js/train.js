@@ -4,15 +4,12 @@
 
 // const imageLoader = document.getElementById("image-loader")
 
-
-
 // const start = async () => {
 
 //      buttons_ids = [47, 79, 20, 53, 81, 83, 56, 62, 29, 33, 34, 54, 5, 11, 3, 68];
 //      for (id of buttons_ids) {
 //           document.getElementById(id.toString()).addEventListener('click', (e) => load_image(e.target.value));
 //      };
-
 
 //      document.getElementById('add-button').addEventListener('click', (e) => search());
 //      const search = () => {
