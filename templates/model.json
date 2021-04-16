@@ -2232,7 +2232,7 @@
   },
   "weightsManifest": [
     {
-      "paths": ["templates/model.weights.bin"],
+      "paths": ["model.weights.bin"],
       "weights": [
         {
           "name": "conv1/kernel",
