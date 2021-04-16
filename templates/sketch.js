@@ -33,7 +33,6 @@ function setup() {
   
   video = createCapture(VIDEO);
   video.parent('videoContainer');
-  video.size(500, 500);
   
   
 
@@ -271,8 +270,10 @@ function gotResults(err, results) {
     console.error(err);
   }
   if (results && results[0]) {
-    select('#result').html(results[0].label);
-    select('#confidence').html(results[0].confidence.toFixed(2) * 100 + '%');
+    if(results[0].confidence>0.4){
+      select('#result').html(results[0].label);
+      select('#confidence').html(results[0].confidence.toFixed(2) * 100 + '%');
+    }
     classify();
   }
 }
