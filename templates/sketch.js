@@ -23,6 +23,9 @@ let I_love_you = 0;
 let Good = 0;
 let That = 0;
 let Hello = 0;
+var w = window.innerWidth;
+var h = window.innerHeight;
+
 
 
 const result = document.getElementById("result")
@@ -33,7 +36,12 @@ function setup() {
   
   video = createCapture(VIDEO);
   video.parent('videoContainer');
-  
+  if(w<1000){
+  video.size(350, 350);
+  }
+  if(w>1000){
+    video.size(600,500);
+  }
   
 
   // Extract the already learned features from MobileNet

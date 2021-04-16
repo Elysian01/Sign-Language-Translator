@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="../docs/logo.png">
     <script src="sketch.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ml5 -->
     <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js"></script>
@@ -67,7 +68,7 @@
         margin: -100px 0 0 -100px;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 720px) {
         #staus {
             left: 100px;
             margin: 0;
@@ -93,37 +94,39 @@
         }
 
         #videoContainer {
-             width: 50%;
+             width: 0;
+             height: 0;
+             size: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            top: 100%;
+            top: 65%;
             margin: 0;
+            border: none;
+            margin-left: 4%;
         }
     }
 </style>
 
 <body id="load">
-    <nav class="navbar" style="padding: 1%;">
+    <nav class="navbar">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
         </span>
-        <h5><a href="../index.html" style="font-weight: bold;" class="logo">Sign Language
-                <span>Translator</span></a></h5>
+        <h5><a href="../index.html" class="logo">Sign Language<span>Translator</span></a></h5>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="../index.html" class="nav-links">Tutorials</a>
+                <a href="../index.html" class="nav-links ">Tutorials</a>
             </li>
             <li>
-                <a href="Training.html" class="nav-links">Training</a>
-            </li>
-
-            <li>
-                <a href="Model.html" class="nav-links">Test Your Skill</a>
+                <a href="./Training.html" class="nav-links">Training</a>
             </li>
 
             <li>
-                <a href="About.html" class="nav-links">About</a>
+                <a href="Model.html" class="nav-links orange" style="color: #ff9900;">Test Your Skills</a>
+            </li>
+
+            <li>
+                <a href="./About.html" class="nav-links " >About</a>
             </li>
 
         </ul>
@@ -151,6 +154,15 @@
         </div>
 
         <script>
+
+
+        let mainNav = document.getElementById('js-menu');
+        let navBarToggle = document.getElementById('js-navbar-toggle');
+
+        navBarToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+    
 
             $(window).on('load', function () {
                 $('#status').fadeIn();
@@ -192,7 +204,7 @@
             <span id="F">0</span> F<br />
             <button id="G">Add G</button>
             <span id="G">0</span> G<br />
-            <button id="H">H</button>
+            <button id="H">Add H</button>
             <span id="H">0</span>H<br />
 
             <button id="L">Add L</button>

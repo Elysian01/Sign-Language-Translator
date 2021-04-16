@@ -135,7 +135,7 @@ span{
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .navbar {
       display: flex;
       justify-content: space-between;
@@ -154,6 +154,7 @@ span{
       display: block;
   }
   .main-nav li {
+    text-align: center;
       margin: 0;
   }
 
