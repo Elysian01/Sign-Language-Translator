@@ -2232,9 +2232,7 @@
   },
   "weightsManifest": [
     {
-      "paths": [
-        "https://elysian01.github.io/Sign-Language-Translator/templates/model.weights.bin"
-      ],
+      "paths": ["Sign-Language-Translator/templates/model.weights.bin"],
       "weights": [
         {
           "name": "conv1/kernel",
