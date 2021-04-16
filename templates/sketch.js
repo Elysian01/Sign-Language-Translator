@@ -37,7 +37,7 @@ function setup() {
   video = createCapture(VIDEO);
   video.parent('videoContainer');
   if(w<1000){
-  video.size(350, 350);
+  video.size(300,300);
   }
   if(w>1000){
     video.size(600,500);
