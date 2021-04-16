@@ -2233,7 +2233,7 @@
   "weightsManifest": [
     {
       "paths": [
-        "https://elysian01.github.io/Sign-Language-Translator/model.weights.bin"
+        "https://github.com/Elysian01/Sign-Language-Translator/blob/master/model.weights.bin"
       ],
       "weights": [
         {
