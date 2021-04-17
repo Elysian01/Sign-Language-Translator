@@ -104,108 +104,92 @@ function setupButtons() {
 
   // When the Dog button is pressed, add the current frame
   // from the video with a label of "dog" to the classifier
-  buttonB = select('#E');
-  buttonB.mousePressed(function() {
-    classifier.addImage('E');
-    select('#E').html(E++);
-  });
-  buttonB = select('#F');
-  buttonB.mousePressed(function() {
-    classifier.addImage('F');
-    select('#F').html(F++);
-  });
+  // buttonB = select('#E');
+  // buttonB.mousePressed(function() {
+  //   classifier.addImage('E');
+  //   select('#E').html(E++);
+  // });
+  // buttonB = select('#F');
+  // buttonB.mousePressed(function() {
+  //   classifier.addImage('F');
+  //   select('#F').html(F++);
+  // });
 
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  buttonC = select('#G');
-  buttonC.mousePressed(function() {
-    classifier.addImage('G');
-    select('#G').html(G++);
-  });
-  buttonA = select('#H');
-  buttonA.mousePressed(function() {
-    classifier.addImage('H');
-    select('#H').html(H++);
-  });
+  // // When the Dog button is pressed, add the current frame
+  // // from the video with a label of "dog" to the classifier
+  // buttonC = select('#G');
+  // buttonC.mousePressed(function() {
+  //   classifier.addImage('G');
+  //   select('#G').html(G++);
+  // });
+  // buttonA = select('#H');
+  // buttonA.mousePressed(function() {
+  //   classifier.addImage('H');
+  //   select('#H').html(H++);
+  // });
 
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  
   buttonA = select('#L');
   buttonA.mousePressed(function() {
     classifier.addImage('L');
     select('#L').html(L++);
   });
 
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
+ 
   buttonB = select('#O');
   buttonB.mousePressed(function() {
     classifier.addImage('O');
     select('#O').html(O++);
   });
 
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  buttonC = select('#P');
-  buttonC.mousePressed(function() {
-    classifier.addImage('P');
-    select('#P').html(P++);
-  });
   
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  buttonC = select('#V');
-  buttonC.mousePressed(function() {
-    classifier.addImage('V');
-    select('#V').html(V++);
-  });
+  // buttonC = select('#P');
+  // buttonC.mousePressed(function() {
+  //   classifier.addImage('P');
+  //   select('#P').html(P++);
+  // });
+  
+  // // When the Dog button is pressed, add the current frame
+  // // from the video with a label of "dog" to the classifier
+  // buttonC = select('#V');
+  // buttonC.mousePressed(function() {
+  //   classifier.addImage('V');
+  //   select('#V').html(V++);
+  // });
  
 
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  buttonB = select('#W');
-  buttonB.mousePressed(function() {
-    classifier.addImage('W');
-    select('#W').html(W++);
-  });
+  // // When the Dog button is pressed, add the current frame
+  // // from the video with a label of "dog" to the classifier
+  // buttonB = select('#W');
+  // buttonB.mousePressed(function() {
+  //   classifier.addImage('W');
+  //   select('#W').html(W++);
+  // });
 
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  buttonC = select('#Y');
-  buttonC.mousePressed(function() {
-    classifier.addImage('Y');
-    select('#Y').html(Y++);
-  });
+  // // When the Dog button is pressed, add the current frame
+  // // from the video with a label of "dog" to the classifier
+  // buttonC = select('#Y');
+  // buttonC.mousePressed(function() {
+  //   classifier.addImage('Y');
+  //   select('#Y').html(Y++);
+  // });
    buttonC = select('#Ok');
   buttonC.mousePressed(function() {
     classifier.addImage('Ok');
     select('#Ok').html(Ok++);
   });
  
-
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
   buttonB = select('#Good');
   buttonB.mousePressed(function() {
     classifier.addImage('Good');
     select('#Good').html(Good++);
   });
 
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
   buttonC = select('#Bad');
   buttonC.mousePressed(function() {
     classifier.addImage('Bad');
     select('#Bad').html(Bad++);
   });
   
-
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
   buttonB = select('#I_love_you');
   buttonB.mousePressed(function() {
     classifier.addImage('I_love_you');
@@ -217,20 +201,11 @@ function setupButtons() {
     select('#That').html(That++);
   });
  
-
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
   buttonB = select('#Hello');
   buttonB.mousePressed(function() {
     classifier.addImage('Hello');
     select('#Hello').html(Hello++);
   });
-
-  
-
-  // When the Dog button is pressed, add the current frame
-  // from the video with a label of "dog" to the classifier
-  
 
   // Train Button
   train = select('#train');

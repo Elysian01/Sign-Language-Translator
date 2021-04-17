@@ -34,7 +34,8 @@
         position: absolute;
         left: 32%;
         top: 28.5%;
-        border:2px solid #ff9900;
+        border: 2px solid #ff9900;
+        border-radius: 1%;
     }
 
 
@@ -103,50 +104,39 @@
             <li>
                 <a href="./Training.html" class="nav-links">Training</a>
             </li>
-
             <li>
                 <a href="Model.html" class="nav-links orange" style="color: #ff9900;">Test Your Skills</a>
             </li>
-
             <li>
-                <a href="./About.html" class="nav-links " >About</a>
+                <a href="./About.html" class="nav-links ">About</a>
             </li>
-
         </ul>
     </nav>
     <div class="alert alert-success">
         Recommeded to use in a white diagram and plaese show only the hand into camera
-        <a href="About.html" style="color: red;">click
-            here </a>
     </div>
-
-
     <h1 class="myheading" style="font-weight: bolder;"><i style="color:#ff9900 ;" class="fas fa-hand-sparkles"></i>
         Practice Alphabets And Words</h1><br>
-
     <div class="body">
         <div class="container shadow-lg p-3 bg-white rounded text-center">
             <button id="buttonPredict" class="btn btn-dark shadow-lg " data-toggle="button"
-                style="color: #ff9900;">Start
-                Practicing!</button><br />
-            <br>
-            <p style="color:red;">Note:We Currently Support 21 Sign's [ASL]</p>
+                style="color: #ff9900;">Start Practicing!
+            </button>
+            <br /><br>
+            <p style="font-weight: bold;">
+                Corresponding Word/Letter:
+                <span style="font-weight: bold;" id="result">
+                </span>
+                <br />Accuracy:
+                <span id="confidence"></span>
             </p>
-            <p style="font-weight: bold;">Corresponding Word/Letter: <span style="font-weight: bold;" id="result">
-                </span><br />Accuracy: <span id="confidence"></span></p>
         </div>
-
         <script>
-
-
-        let mainNav = document.getElementById('js-menu');
-        let navBarToggle = document.getElementById('js-navbar-toggle');
-
-        navBarToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-        });
-    
-
+            let mainNav = document.getElementById('js-menu');
+            let navBarToggle = document.getElementById('js-navbar-toggle');
+            navBarToggle.addEventListener('click', function () {
+                mainNav.classList.toggle('active');
+            });
             $(window).on('load', function () {
                 $('#status').fadeIn();
                 $('#preloader').fadeOut();
@@ -154,22 +144,17 @@
                     'overflow': 'visible'
                 });
             });
-
-
         </script>
-
         <div id="videoContainer"></div>
-
-
         <div id="preloader">
             <div id="status"></div>
         </div>
-
         <div class="container1 pred1 rounded">
-            <img src="../static/images/sign.jpg" style="border: 2px solid #ff9900;" width=300px; height="400px;"></img>
+            <h2 style="font-weight: bolder;text-align: center;">Supported Signs</h2>
+            <br>
+            <img src="../docs/STL-100.jpg" style="border: 2px solid #ff9900;border-radius: 1%;" width=300px; height="400px;"></img>
         </div>
     </div>
-
     <div class="hide" style="display: none;">
         <p><span id="modelStatus">Loading MobileNet</span></p>
         <p>
@@ -181,56 +166,46 @@
             <span id="C">0</span> C<br />
             <button id="D">Add D</button>
             <span id="D">0</span> D<br />
-            <button id="E">Add E</button>
+            <!-- <button id="E">Add E</button>
             <span id="E">0</span> E<br />
             <button id="F">Add F</button>
             <span id="F">0</span> F<br />
             <button id="G">Add G</button>
             <span id="G">0</span> G<br />
             <button id="H">Add H</button>
-            <span id="H">0</span>H<br />
-
+            <span id="H">0</span>H<br /> -->
             <button id="L">Add L</button>
             <span id="L">0</span> L<br />
             <button id="O">Add O</button>
             <span id="O">0</span> O<br />
-            <button id="P">Add P</button>
+            <!-- <button id="P">Add P</button>
             <span id="P">0</span> P<br />
             <button id="V">Add V</button>
             <span id="V">0</span> V<br />
-
             <button id="W">Add W</button>
             <span id="W">0</span> W<br />
-
             <button id="Y">Add Y</button>
-            <span id="Y">0</span> Y<br />
+            <span id="Y">0</span> Y<br /> -->
             <button id="Ok">Add Ok</button>
             <span id="Ok">0</span> Ok<br />
-
             <button id="Bad">Add Bad</button>
             <span id="Bad">0</span> Bad<br />
             <button id="I_love_you">Add I love You</button>
             <span id="I_love_you">0</span> I love you<br />
             <button id="Good">Add Good</button>
             <span id="Good">0</span> Good<br />
-
             <button id="Hello">Add Hello</button>
             <span id="Hello">0</span> Hello<br />
             <button id="That">Add That</button>
             <span id="That">0</span> That<br />
-
             <br />
             <button id="train">Train</button><span id="loss"></span>
     </div>
-
     <p style="display: none;">
         <button id="save">Save Model</button>
         <label for="avatar">Load Model:</label>
         <input type="file" id="load" multiple />
     </p>
-
 </body>
-
-</html>
 
 </html>
