@@ -26,7 +26,3 @@
 <img src="./docs/Videos/SLT-Practice-GIF.gif" alt="#" width="700px" height="350px">
 
 <br>
-
-
-
-
